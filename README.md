@@ -1488,11 +1488,7 @@ Object `Kamera` menjalankan method `tampilkanInfo()` milik `Kamera`, sedangkan o
 
 # 🖥️ 24. DOKUMENTASI OUTPUT PROGRAM
 
-Screenshot hasil pengujian disimpan dalam folder:
-
-~~~text
-screenshots/
-~~~
+Dokumentasi hasil output program:
 
 ## 24.1 Menu Utama
 

@@ -97,26 +97,6 @@ Tujuan pembuatan program ini adalah:
   </tr>
 </table>
 
-~~~text
-Source Packages
-│
-├── Logic
-│   ├── KelolaPerangkat.java
-│   ├── KelolaReservasi.java
-│   └── KelolaPengambilan.java
-│
-├── Main
-│   └── SistemPenyewaanPerangkat.java
-│
-└── Model
-    ├── Perangkat.java
-    ├── Kamera.java
-    ├── Drone.java
-    ├── Penyewa.java
-    ├── Reservasi.java
-    └── Pengambilan.java
-~~~
-
 ## 4.1 Package `Model`
 
 Package `Model` berisi class yang merepresentasikan objek dalam sistem.

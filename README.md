@@ -92,7 +92,7 @@ Tujuan pembuatan program ini adalah:
 <table border="1" bordercolor="black">
   <tr>
     <td>
-      <img src="https://github.com" width="100%">
+      <img src="https://github.com/Sitinursinta04/PRAKTIKUM_PBO/blob/main/Matkul/Screenshot%202026-09-25%20203530.png" width="100%">
     </td>
   </tr>
 </table>
@@ -1519,7 +1519,7 @@ screenshots/
 <table border="1" bordercolor="black">
   <tr>
     <td>
-      <img src="https://github.com" width="100%">
+      <img src="https://github.com/Sitinursinta04/PRAKTIKUM_PBO/blob/main/Matkul/Screenshot%202026-09-25%20114347.png" width="100%">
     </td>
   </tr>
 </table>
@@ -1533,7 +1533,7 @@ Menampilkan seluruh pilihan fitur yang tersedia dalam program.
 <table border="1" bordercolor="black">
   <tr>
     <td>
-      <img src="https://github.com" width="100%">
+      <img src="https://github.com/Sitinursinta04/PRAKTIKUM_PBO/blob/main/Matkul/Screenshot%202026-09-25%20114411.png" width="100%">
     </td>
   </tr>
 </table>
@@ -1547,7 +1547,7 @@ Menampilkan seluruh perangkat yang tersimpan dalam sistem.
 <table border="1" bordercolor="black">
   <tr>
     <td>
-      <img src="https://github.com" width="100%">
+      <img src="https://github.com/Sitinursinta04/PRAKTIKUM_PBO/blob/main/Matkul/Screenshot%202026-09-25%20114539.png" width="100%">
     </td>
   </tr>
 </table>
@@ -1561,7 +1561,7 @@ Menampilkan proses penambahan data kamera.
 <table border="1" bordercolor="black">
   <tr>
     <td>
-      <img src="https://github.com" width="100%">
+      <img src="https://github.com/Sitinursinta04/PRAKTIKUM_PBO/blob/main/Matkul/Screenshot%202026-09-25%20114654.png" width="100%">
     </td>
   </tr>
 </table>
@@ -1575,7 +1575,7 @@ Menampilkan proses penambahan data drone.
 <table border="1" bordercolor="black">
   <tr>
     <td>
-      <img src="https://github.com" width="100%">
+      <img src="https://github.com/Sitinursinta04/PRAKTIKUM_PBO/blob/main/Matkul/Screenshot%202026-09-25%20114728.png" width="100%">
     </td>
   </tr>
 </table>
@@ -1589,7 +1589,14 @@ Menampilkan proses pencarian perangkat berdasarkan ID.
 <table border="1" bordercolor="black">
   <tr>
     <td>
-      <img src="https://github.com" width="100%">
+      <img src="https://github.com/Sitinursinta04/PRAKTIKUM_PBO/blob/main/Matkul/Screenshot%202026-09-25%20114903.png" width="100%">
+    </td>
+  </tr>
+</table>
+<table border="1" bordercolor="black">
+  <tr>
+    <td>
+      <img src="https://github.com/Sitinursinta04/PRAKTIKUM_PBO/blob/main/Matkul/Screenshot%202026-09-25%20114922.png" width="100%">
     </td>
   </tr>
 </table>
@@ -1603,7 +1610,14 @@ Menampilkan proses perubahan status perangkat.
 <table border="1" bordercolor="black">
   <tr>
     <td>
-      <img src="https://github.com" width="100%">
+      <img src="https://github.com/Sitinursinta04/PRAKTIKUM_PBO/blob/main/Matkul/Screenshot%202026-09-25%20114952.png" width="100%">
+    </td>
+  </tr>
+</table>
+<table border="1" bordercolor="black">
+  <tr>
+    <td>
+      <img src="https://github.com/Sitinursinta04/PRAKTIKUM_PBO/blob/main/Matkul/Screenshot%202026-09-25%20115040.png" width="100%">
     </td>
   </tr>
 </table>
@@ -1617,7 +1631,7 @@ Menampilkan proses penghapusan perangkat.
 <table border="1" bordercolor="black">
   <tr>
     <td>
-      <img src="https://github.com" width="100%">
+      <img src="https://github.com/Sitinursinta04/PRAKTIKUM_PBO/blob/main/Matkul/Screenshot%202026-09-25%20115108.png" width="100%">
     </td>
   </tr>
 </table>
@@ -1631,7 +1645,7 @@ Menampilkan ringkasan data yang terdapat dalam sistem.
 <table border="1" bordercolor="black">
   <tr>
     <td>
-      <img src="https://github.com" width="100%">
+      <img src="https://github.com/Sitinursinta04/PRAKTIKUM_PBO/blob/main/Matkul/Screenshot%202026-09-25%20115137.png" width="100%">
     </td>
   </tr>
 </table>
@@ -1645,7 +1659,7 @@ Menampilkan hasil rekomendasi perangkat berdasarkan kebutuhan pengguna.
 <table border="1" bordercolor="black">
   <tr>
     <td>
-      <img src="https://github.com" width="100%">
+      <img src="https://github.com/Sitinursinta04/PRAKTIKUM_PBO/blob/main/Matkul/Screenshot%202026-09-25%20115425.png" width="100%">
     </td>
   </tr>
 </table>
@@ -1659,7 +1673,7 @@ Menampilkan proses pembuatan reservasi, generate ID, dan perhitungan total harga
 <table border="1" bordercolor="black">
   <tr>
     <td>
-      <img src="https://github.com" width="100%">
+      <img src="https://github.com/Sitinursinta04/PRAKTIKUM_PBO/blob/main/Matkul/Screenshot%202026-09-25%20115440.png" width="100%">
     </td>
   </tr>
 </table>
@@ -1673,7 +1687,7 @@ Menampilkan seluruh reservasi yang telah tersimpan.
 <table border="1" bordercolor="black">
   <tr>
     <td>
-      <img src="https://github.com" width="100%">
+      <img src="https://github.com/Sitinursinta04/PRAKTIKUM_PBO/blob/main/Matkul/Screenshot%202026-09-25%20115600.png" width="100%">
     </td>
   </tr>
 </table>
@@ -1687,7 +1701,7 @@ Menampilkan proses pencatatan pengambilan perangkat.
 <table border="1" bordercolor="black">
   <tr>
     <td>
-      <img src="https://github.com" width="100%">
+      <img src="https://github.com/Sitinursinta04/PRAKTIKUM_PBO/blob/main/Matkul/Screenshot%202026-09-25%20115633.png" width="100%">
     </td>
   </tr>
 </table>
@@ -1701,7 +1715,7 @@ Menampilkan seluruh data pengambilan yang telah tersimpan.
 <table border="1" bordercolor="black">
   <tr>
     <td>
-      <img src="https://github.com" width="100%">
+      <img src="https://github.com/Sitinursinta04/PRAKTIKUM_PBO/blob/main/Matkul/Screenshot%202026-09-25%20115706.png" width="100%">
     </td>
   </tr>
 </table>
@@ -1715,7 +1729,7 @@ Menampilkan hasil overriding method `tampilkanInfo()` pada `Kamera` dan `Drone`.
 <table border="1" bordercolor="black">
   <tr>
     <td>
-      <img src="https://github.com" width="100%">
+      <img src="https://github.com/Sitinursinta04/PRAKTIKUM_PBO/blob/main/Matkul/Screenshot%202026-09-25%20115726.png" width="100%">
     </td>
   </tr>
 </table>

@@ -1,0 +1,10 @@
+Model\Kamera.class
+Model\Reservasi.class
+Logic\KelolaReservasi.class
+Model\Pengambilan.class
+Model\Perangkat.class
+Main\SistemPenyewaanPerangkat.class
+Logic\KelolaPengambilan.class
+Model\Drone.class
+Model\Penyewa.class
+Logic\KelolaPerangkat.class

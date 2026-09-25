@@ -52,7 +52,7 @@ Dengan rancangan tersebut, program tidak hanya menjalankan fungsi penyewaan, tet
 
 ---
 
-# 💡 3. TUJUAN PROYEK
+# 🎯 3. TUJUAN PROYEK
 
 Program dibuat untuk:
 
@@ -71,25 +71,27 @@ Program dibuat untuk:
 
 # 🧩 4. STRUKTUR PROJECT
 
-    Source Packages
-    │
-    ├── Logic
-    │   ├── KelolaPerangkat.java
-    │   ├── KelolaReservasi.java
-    │   └── KelolaPengambilan.java
-    │
-    ├── Main
-    │   └── SistemPenyewaanPerangkat.java
-    │
-    └── Model
-        ├── Perangkat.java
-        ├── Kamera.java
-        ├── Drone.java
-        ├── Penyewa.java
-        ├── Reservasi.java
-        └── Pengambilan.java
+```text
+Source Packages
+│
+├── Logic
+│   ├── KelolaPerangkat.java
+│   ├── KelolaReservasi.java
+│   └── KelolaPengambilan.java
+│
+├── Main
+│   └── SistemPenyewaanPerangkat.java
+│
+└── Model
+    ├── Perangkat.java
+    ├── Kamera.java
+    ├── Drone.java
+    ├── Penyewa.java
+    ├── Reservasi.java
+    └── Pengambilan.java
+```
 
-### Pembagian tanggung jawab
+### Pembagian Tanggung Jawab
 
 | Package | Tanggung Jawab |
 |---|---|
@@ -101,31 +103,37 @@ Program dibuat untuk:
 
 # 🌳 5. HIERARKI CLASS
 
-    Perangkat
-    ├── Kamera
-    └── Drone
+```text
+Perangkat
+├── Kamera
+└── Drone
+```
 
-Relasi objek:
+Hubungan antarobjek:
 
-    Penyewa
-       │
-       ▼
-    Reservasi ─────────► Perangkat
-       │
-       ▼
-    Pengambilan
+```text
+Penyewa
+   │
+   ▼
+Reservasi ─────────► Perangkat
+   │
+   ▼
+Pengambilan
+```
 
-Alur utama:
+### Alur Utama
 
-    Penyewa
-       ↓
-    Membuat Reservasi
-       ↓
-    Memilih Perangkat
-       ↓
-    Reservasi Tersimpan
-       ↓
-    Pengambilan Perangkat
+```text
+Penyewa
+   ↓
+Membuat Reservasi
+   ↓
+Memilih Perangkat
+   ↓
+Reservasi Tersimpan
+   ↓
+Pengambilan Perangkat
+```
 
 ---
 
@@ -133,14 +141,16 @@ Alur utama:
 
 ## 6.1 `Perangkat`
 
-Superclass yang menyimpan informasi umum seluruh perangkat.
+`Perangkat` merupakan superclass yang menyimpan informasi umum dari seluruh perangkat.
 
 **Atribut:**
 
-    idPerangkat
-    namaPerangkat
-    hargaSewa
-    status
+```text
+idPerangkat
+namaPerangkat
+hargaSewa
+status
+```
 
 **Tanggung jawab:**
 
@@ -153,12 +163,14 @@ Superclass yang menyimpan informasi umum seluruh perangkat.
 
 ## 6.2 `Kamera`
 
-Subclass dari `Perangkat`.
+`Kamera` merupakan subclass dari `Perangkat`.
 
 **Atribut tambahan:**
 
-    resolusi
-    jenisKamera
+```text
+resolusi
+jenisKamera
+```
 
 **Tanggung jawab:**
 
@@ -170,12 +182,14 @@ Subclass dari `Perangkat`.
 
 ## 6.3 `Drone`
 
-Subclass dari `Perangkat`.
+`Drone` merupakan subclass dari `Perangkat`.
 
 **Atribut tambahan:**
 
-    resolusiKamera
-    durasiTerbang
+```text
+resolusiKamera
+durasiTerbang
+```
 
 **Tanggung jawab:**
 
@@ -187,29 +201,33 @@ Subclass dari `Perangkat`.
 
 ## 6.4 `Penyewa`
 
-Menyimpan data orang yang melakukan penyewaan.
+`Penyewa` digunakan untuk menyimpan data orang yang melakukan penyewaan.
 
 **Atribut:**
 
-    idPenyewa
-    namaPenyewa
-    noTelepon
-    alamat
+```text
+idPenyewa
+namaPenyewa
+noTelepon
+alamat
+```
 
 ---
 
 ## 6.5 `Reservasi`
 
-Mencatat proses pemesanan perangkat.
+`Reservasi` digunakan untuk mencatat proses pemesanan perangkat.
 
 **Atribut:**
 
-    idReservasi
-    penyewa
-    perangkat
-    tanggalReservasi
-    lamaSewa
-    statusReservasi
+```text
+idReservasi
+penyewa
+perangkat
+tanggalReservasi
+lamaSewa
+statusReservasi
+```
 
 **Tanggung jawab:**
 
@@ -222,15 +240,17 @@ Mencatat proses pemesanan perangkat.
 
 ## 6.6 `Pengambilan`
 
-Mencatat proses pengambilan perangkat.
+`Pengambilan` digunakan untuk mencatat proses pengambilan perangkat.
 
 **Atribut:**
 
-    idPengambilan
-    reservasi
-    tanggalPengambilan
-    jamPengambilan
-    statusPengambilan
+```text
+idPengambilan
+reservasi
+tanggalPengambilan
+jamPengambilan
+statusPengambilan
+```
 
 **Tanggung jawab:**
 
@@ -246,11 +266,18 @@ Mencatat proses pengambilan perangkat.
 
 Inheritance digunakan agar `Kamera` dan `Drone` dapat mewarisi karakteristik umum dari `Perangkat`.
 
-    public class Kamera extends Perangkat
+```java
+public class Kamera extends Perangkat
+```
 
-    public class Drone extends Perangkat
+```java
+public class Drone extends Perangkat
+```
 
-Dengan demikian, atribut seperti ID, nama, harga sewa, dan status tidak perlu dibuat ulang pada masing-masing subclass.
+Dengan inheritance, atribut seperti ID, nama, harga sewa, dan status tidak perlu dibuat ulang pada masing-masing subclass.
+
+**Insight:**  
+`Kamera` dan `Drone` sama-sama merupakan jenis perangkat yang dapat disewa sehingga memiliki data umum yang sama. Data yang sama ditempatkan pada `Perangkat`, sedangkan karakteristik khusus ditempatkan pada masing-masing subclass.
 
 ---
 
@@ -258,70 +285,86 @@ Dengan demikian, atribut seperti ID, nama, harga sewa, dan status tidak perlu di
 
 Constructor subclass menggunakan `super()`:
 
-    super(
-        idPerangkat,
-        namaPerangkat,
-        hargaSewa,
-        status
-    );
+```java
+super(
+    idPerangkat,
+    namaPerangkat,
+    hargaSewa,
+    status
+);
+```
 
-`super()` digunakan untuk memanggil constructor superclass.
+`super()` digunakan untuk memanggil constructor milik superclass.
 
 Subclass juga menggunakan:
 
-    super.tampilkanInfo();
+```java
+super.tampilkanInfo();
+```
 
 untuk menjalankan method milik `Perangkat` sebelum menampilkan informasi khusus subclass.
+
+**Insight:**  
+Penggunaan `super()` membuat subclass dapat memanfaatkan proses inisialisasi dan method yang sudah tersedia pada superclass tanpa menuliskan kembali kode yang sama.
 
 ---
 
 ## 7.3 Polymorphism
 
-Polymorphism diterapkan melalui overriding.
+Polymorphism diterapkan melalui **method overriding**.
 
 Pada `Kamera`:
 
-    @Override
-    public void tampilkanInfo() {
-        super.tampilkanInfo();
+```java
+@Override
+public void tampilkanInfo() {
+    super.tampilkanInfo();
 
-        System.out.println(
-                "Resolusi       : "
-                + resolusi);
+    System.out.println(
+            "Resolusi       : "
+            + resolusi);
 
-        System.out.println(
-                "Jenis Kamera   : "
-                + jenisKamera);
-    }
+    System.out.println(
+            "Jenis Kamera   : "
+            + jenisKamera);
+}
+```
 
 Pada `Drone`:
 
-    @Override
-    public void tampilkanInfo() {
-        super.tampilkanInfo();
+```java
+@Override
+public void tampilkanInfo() {
+    super.tampilkanInfo();
 
-        System.out.println(
-                "Resolusi Kamera: "
-                + resolusiKamera);
+    System.out.println(
+            "Resolusi Kamera: "
+            + resolusiKamera);
 
-        System.out.println(
-                "Durasi Terbang : "
-                + durasiTerbang
-                + " menit");
-    }
+    System.out.println(
+            "Durasi Terbang : "
+            + durasiTerbang
+            + " menit");
+}
+```
 
 Penggunaan referensi superclass juga ditunjukkan melalui:
 
-    Perangkat perangkat1 =
-            new Kamera(...);
+```java
+Perangkat perangkat1 =
+        new Kamera(...);
 
-    Perangkat perangkat2 =
-            new Drone(...);
+Perangkat perangkat2 =
+        new Drone(...);
 
-    perangkat1.tampilkanInfo();
-    perangkat2.tampilkanInfo();
+perangkat1.tampilkanInfo();
+perangkat2.tampilkanInfo();
+```
 
 Walaupun referensinya bertipe `Perangkat`, method yang dijalankan menyesuaikan object sebenarnya.
+
+**Insight:**  
+Overriding memungkinkan method dengan nama yang sama memberikan hasil yang berbeda sesuai jenis object. Dengan demikian, `Kamera` dapat menampilkan informasi khusus kamera dan `Drone` dapat menampilkan informasi khusus drone.
 
 ---
 
@@ -331,21 +374,28 @@ Atribut pada model dibuat `private`.
 
 Contoh:
 
-    private String status;
+```java
+private String status;
+```
 
 Akses dilakukan melalui getter:
 
-    public String getStatus() {
-        return status;
-    }
+```java
+public String getStatus() {
+    return status;
+}
+```
 
 Perubahan nilai dilakukan melalui setter:
 
-    public void setStatus(String status) {
-        this.status = status;
-    }
+```java
+public void setStatus(String status) {
+    this.status = status;
+}
+```
 
-Pendekatan ini membuat data object tidak diubah secara langsung dari luar class.
+**Insight:**  
+Encapsulation digunakan agar data internal object tidak dapat diakses dan diubah secara langsung dari luar class. Akses data dilakukan melalui method yang telah disediakan.
 
 ---
 
@@ -355,23 +405,32 @@ Data yang jumlahnya dapat berubah selama program berjalan dikelola menggunakan `
 
 Contoh pada `KelolaReservasi`:
 
-    private ArrayList<Reservasi> daftarReservasi;
+```java
+private ArrayList<Reservasi> daftarReservasi;
 
-    public KelolaReservasi() {
-        daftarReservasi = new ArrayList<>();
-    }
+public KelolaReservasi() {
+    daftarReservasi = new ArrayList<>();
+}
+```
 
 Data ditambahkan dengan:
 
-    daftarReservasi.add(reservasi);
+```java
+daftarReservasi.add(reservasi);
+```
 
 Data ditampilkan menggunakan perulangan:
 
-    for (Reservasi reservasi : daftarReservasi) {
-        reservasi.tampilkanInfo();
-    }
+```java
+for (Reservasi reservasi : daftarReservasi) {
+    reservasi.tampilkanInfo();
+}
+```
 
 Konsep yang sama digunakan pada pengelolaan perangkat dan pengambilan.
+
+**Insight:**  
+`ArrayList` dipilih karena jumlah data perangkat, reservasi, dan pengambilan dapat bertambah selama program berjalan. Dengan demikian, program tidak perlu menentukan jumlah data sejak awal.
 
 ---
 
@@ -383,29 +442,38 @@ Program menggunakan ID otomatis untuk reservasi dan pengambilan.
 
 Format ID:
 
-    R001
-    R002
-    R003
+```text
+R001
+R002
+R003
+```
 
 Kode:
 
-    String id = String.format("R%03d", nomor);
+```java
+String id = String.format("R%03d", nomor);
+```
 
 Program kemudian memastikan ID belum digunakan:
 
-    if (cariReservasi(id) == null) {
-        return id;
-    }
+```java
+if (cariReservasi(id) == null) {
+    return id;
+}
+```
 
 ### Pengambilan
 
 Format ID:
 
-    PG001
-    PG002
-    PG003
+```text
+PG001
+PG002
+PG003
+```
 
-Pendekatan ini mengurangi kemungkinan terjadinya ID yang sama dan membuat pengguna tidak perlu menentukan ID reservasi atau pengambilan secara manual.
+**Insight:**  
+Pembuatan ID secara otomatis mengurangi kemungkinan terjadinya ID yang sama dan membuat pengguna tidak perlu menentukan ID reservasi atau pengambilan secara manual.
 
 ---
 
@@ -413,85 +481,96 @@ Pendekatan ini mengurangi kemungkinan terjadinya ID yang sama dan membuat penggu
 
 Program menggunakan beberapa bentuk control flow yang saling melengkapi.
 
-### `switch-case`
+## `switch-case`
 
 Digunakan untuk menentukan proses berdasarkan menu yang dipilih pengguna.
 
-    switch (pilihan) {
-        case 1:
-            // tampilkan perangkat
-            break;
+```java
+switch (pilihan) {
+    case 1:
+        // tampilkan perangkat
+        break;
 
-        case 2:
-            // tambah kamera
-            break;
+    case 2:
+        // tambah kamera
+        break;
 
-        case 9:
-            // buat reservasi
-            break;
+    case 9:
+        // buat reservasi
+        break;
 
-        case 14:
-            // keluar
-            break;
-    }
+    case 14:
+        // keluar
+        break;
+}
+```
 
-### `if-else`
+## `if-else`
 
 Digunakan untuk menentukan apakah suatu kondisi terpenuhi.
 
 Contohnya ketika melakukan reservasi:
 
-    if (perangkat.getStatus()
-            .equalsIgnoreCase("Tersedia")) {
+```java
+if (perangkat.getStatus()
+        .equalsIgnoreCase("Tersedia")) {
 
-        // proses reservasi
+    // proses reservasi
 
-    } else {
+} else {
 
-        System.out.println(
-            "Perangkat tidak dapat direservasi."
-        );
-    }
+    System.out.println(
+        "Perangkat tidak dapat direservasi."
+    );
+}
+```
 
-### `for`
+## `for`
 
 Digunakan untuk membaca kumpulan data:
 
-    for (Reservasi reservasi : daftarReservasi) {
-        reservasi.tampilkanInfo();
-    }
+```java
+for (Reservasi reservasi : daftarReservasi) {
+    reservasi.tampilkanInfo();
+}
+```
 
-### `while`
+## `while`
 
 Digunakan ketika proses harus dilakukan berulang sampai kondisi tertentu terpenuhi.
 
 Contohnya pada pembuatan ID:
 
-    while (true) {
+```java
+while (true) {
 
-        String id =
-                String.format("R%03d", nomor);
+    String id =
+            String.format("R%03d", nomor);
 
-        if (cariReservasi(id) == null) {
-            return id;
-        }
-
-        nomor++;
+    if (cariReservasi(id) == null) {
+        return id;
     }
 
-### `do-while`
+    nomor++;
+}
+```
 
-Menu utama menggunakan:
+## `do-while`
 
-    do {
+Menu utama menggunakan perulangan `do-while`:
 
-        // tampilkan menu
-        // input pilihan
-        // jalankan proses
+```java
+do {
 
-    } while (pilihan != 14);
+    // tampilkan menu
+    // input pilihan
+    // jalankan proses
 
-Dengan demikian, menu tetap berjalan sampai pengguna memilih menu keluar.
+} while (pilihan != 14);
+```
+
+**Insight:**  
+Setiap control flow digunakan untuk kebutuhan yang berbeda. `switch-case` mengatur pilihan menu, `if-else` melakukan pemeriksaan kondisi, `for` menelusuri data, `while` membantu proses generate ID, sedangkan `do-while` menjaga menu utama tetap berjalan sampai pengguna memilih keluar.
 
 ---
 
@@ -499,45 +578,50 @@ Dengan demikian, menu tetap berjalan sampai pengguna memilih menu keluar.
 
 Alur utama sistem:
 
-    ┌──────────────────────┐
-    │       Perangkat      │
-    │   Kamera / Drone     │
-    └──────────┬───────────┘
-               │
-               ▼
-    ┌──────────────────────┐
-    │        Penyewa       │
-    └──────────┬───────────┘
-               │
-               ▼
-    ┌──────────────────────┐
-    │       Reservasi      │
-    │                      │
-    │ Pilih perangkat      │
-    │ Tentukan tanggal     │
-    │ Tentukan lama sewa   │
-    └──────────┬───────────┘
-               │
-               ▼
-    ┌──────────────────────┐
-    │    Pengambilan       │
-    │       Perangkat      │
-    └──────────┬───────────┘
-               │
-               ▼
-    ┌──────────────────────┐
-    │       Selesai        │
-    └──────────────────────┘
+```text
+┌──────────────────────┐
+│       Perangkat      │
+│   Kamera / Drone     │
+└──────────┬───────────┘
+           │
+           ▼
+┌──────────────────────┐
+│        Penyewa       │
+└──────────┬───────────┘
+           │
+           ▼
+┌──────────────────────┐
+│       Reservasi      │
+│                      │
+│ Pilih perangkat      │
+│ Tentukan tanggal     │
+│ Tentukan lama sewa   │
+└──────────┬───────────┘
+           │
+           ▼
+┌──────────────────────┐
+│     Pengambilan      │
+│      Perangkat       │
+└──────────┬───────────┘
+           │
+           ▼
+┌──────────────────────┐
+│       Selesai        │
+└──────────────────────┘
+```
 
 Status perangkat dalam proses:
 
-    Tersedia
-       ↓
-    Direservasi
-       ↓
-    Disewa
+```text
+Tersedia
+   ↓
+Direservasi
+   ↓
+Disewa
+```
 
-Status tersebut menjadi bagian penting dalam sistem karena menentukan apakah perangkat masih dapat dipilih untuk reservasi.
+**Insight:**  
+Status perangkat tidak hanya digunakan sebagai informasi tampilan, tetapi juga menjadi bagian dari aturan bisnis. Perangkat yang tidak berstatus `Tersedia` tidak dapat langsung dibuatkan reservasi.
 
 ---
 
@@ -545,23 +629,30 @@ Status tersebut menjadi bagian penting dalam sistem karena menentukan apakah per
 
 Total harga dihitung berdasarkan:
 
-    Harga Sewa × Lama Sewa
+```text
+Harga Sewa × Lama Sewa
+```
 
 Implementasinya:
 
-    public double hitungTotalHarga() {
-        return perangkat.getHargaSewa() * lamaSewa;
-    }
+```java
+public double hitungTotalHarga() {
+    return perangkat.getHargaSewa() * lamaSewa;
+}
+```
 
 Contoh:
 
-    Harga Sewa = Rp250.000
-    Lama Sewa  = 2 hari
+```text
+Harga Sewa = Rp250.000
+Lama Sewa  = 2 hari
 
-    Total = Rp250.000 × 2
-          = Rp500.000
+Total = Rp250.000 × 2
+      = Rp500.000
+```
 
-Perhitungan diletakkan pada class `Reservasi` karena informasi harga perangkat dan lama penyewaan merupakan bagian dari proses reservasi.
+**Insight:**  
+Perhitungan diletakkan pada class `Reservasi` karena harga perangkat dan lama penyewaan merupakan informasi yang berkaitan langsung dengan proses reservasi.
 
 ---
 
@@ -571,27 +662,22 @@ Program melakukan pemeriksaan sebelum menjalankan beberapa proses.
 
 Contoh pada reservasi:
 
-    if (perangkat.getStatus()
-            .equalsIgnoreCase("Tersedia")) {
+```java
+if (perangkat.getStatus()
+        .equalsIgnoreCase("Tersedia")) {
 
-        // reservasi berhasil diproses
+    // reservasi berhasil diproses
 
-    } else {
+} else {
 
-        System.out.println(
-            "Perangkat tidak dapat direservasi."
-        );
-    }
+    System.out.println(
+        "Perangkat tidak dapat direservasi."
+    );
+}
+```
 
-Program juga memeriksa lama sewa:
-
-    if (lamaSewa <= 0) {
-        System.out.println(
-            "Lama sewa harus lebih dari 0."
-        );
-    }
-
-Validasi tersebut digunakan agar data yang masuk tidak langsung diproses tanpa pemeriksaan kondisi.
+**Insight:**  
+Validasi digunakan agar proses tidak langsung dijalankan tanpa memeriksa kondisi perangkat. Dengan demikian, perangkat yang sedang tidak tersedia tidak dapat diproses sebagai reservasi baru.
 
 ---
 
@@ -618,9 +704,7 @@ Validasi tersebut digunakan agar data yang masuk tidak langsung diproses tanpa p
 
 # 🧪 15. SKENARIO PENGUJIAN PROGRAM
 
-Pengujian dilakukan melalui beberapa skenario agar fitur utama program dapat ditampilkan.
-
-> **Catatan:** Data input tidak perlu ditulis ulang secara panjang di bagian ini karena data dan hasil proses sudah dapat dilihat pada screenshot output program.
+Pengujian dilakukan melalui beberapa skenario untuk memastikan fitur utama program dapat berjalan.
 
 ## 15.1 Pengelolaan Perangkat
 
@@ -641,7 +725,7 @@ Program kemudian menghasilkan ID reservasi dan menghitung total harga.
 
 ## 15.3 Pengambilan
 
-Pengujian dilakukan menggunakan ID reservasi yang telah dibuat.
+Pengujian dilakukan menggunakan reservasi yang telah dibuat.
 
 Program mencatat tanggal dan jam pengambilan serta memperbarui status terkait.
 
@@ -809,108 +893,128 @@ Menampilkan output ketika pengguna memilih menu keluar.
 
 # 🧠 17. INSIGHT DAN ANALISIS PERANCANGAN
 
-Program ini tidak hanya dibuat agar menu dapat berjalan, tetapi juga dirancang berdasarkan hubungan antarobjek dalam proses penyewaan.
+Bagian ini menjelaskan alasan di balik rancangan program, bukan hanya penggunaan syntax Java.
 
-### 17.1 Mengapa `Kamera` dan `Drone` menjadi subclass?
+## 17.1 Mengapa `Kamera` dan `Drone` menjadi subclass?
 
 Kamera dan drone sama-sama merupakan perangkat yang dapat disewa. Keduanya memiliki informasi umum seperti ID, nama, harga, dan status.
 
 Namun, keduanya mempunyai karakteristik khusus yang berbeda.
 
-Kamera memiliki:
+**Kamera memiliki:**
 
-    resolusi
-    jenisKamera
+```text
+resolusi
+jenisKamera
+```
 
-Sedangkan drone memiliki:
+**Drone memiliki:**
 
-    resolusiKamera
-    durasiTerbang
+```text
+resolusiKamera
+durasiTerbang
+```
 
-Karena terdapat data yang sama sekaligus data khusus, inheritance menjadi pendekatan yang sesuai untuk menghindari pengulangan atribut umum.
+Karena terdapat data yang sama sekaligus data khusus, inheritance digunakan untuk menghindari pengulangan atribut umum.
 
 ---
 
-### 17.2 Mengapa `Reservasi` menyimpan object `Penyewa` dan `Perangkat`?
+## 17.2 Mengapa `Reservasi` menyimpan object `Penyewa` dan `Perangkat`?
 
-Reservasi merupakan titik yang menghubungkan pihak yang menyewa dengan perangkat yang dipilih.
+Reservasi merupakan bagian yang menghubungkan pihak yang menyewa dengan perangkat yang dipilih.
 
 Daripada hanya menyimpan nama penyewa dan nama perangkat sebagai `String`, program menyimpan object:
 
-    private Penyewa penyewa;
-    private Perangkat perangkat;
+```java
+private Penyewa penyewa;
+private Perangkat perangkat;
+```
 
 Dengan pendekatan tersebut, `Reservasi` dapat mengakses informasi object secara langsung.
 
 Contohnya:
 
-    penyewa.getNamaPenyewa()
+```java
+penyewa.getNamaPenyewa();
+```
 
 dan:
 
-    perangkat.getNamaPerangkat()
+```java
+perangkat.getNamaPerangkat();
+```
 
-Hal ini membuat hubungan antarobjek lebih jelas.
+**Insight:**  
+Penggunaan object membuat hubungan antarclass lebih jelas dan mengurangi kebutuhan untuk menyimpan data yang sama berulang kali.
 
 ---
 
-### 17.3 Mengapa status perangkat perlu diubah?
+## 17.3 Mengapa status perangkat perlu diubah?
 
 Status digunakan untuk menggambarkan kondisi perangkat dalam proses penyewaan.
 
-    Tersedia
-        ↓
-    Direservasi
-        ↓
-    Disewa
+```text
+Tersedia
+   ↓
+Direservasi
+   ↓
+Disewa
+```
 
 Status tersebut juga digunakan dalam pengambilan keputusan program.
 
 Contohnya, perangkat yang tidak berstatus `Tersedia` tidak dapat langsung dibuatkan reservasi.
 
-Dengan demikian, status bukan hanya informasi tampilan, tetapi juga menjadi bagian dari aturan bisnis sistem.
+**Insight:**  
+Status perangkat bukan hanya informasi tampilan, tetapi juga menjadi bagian dari aturan bisnis sistem.
 
 ---
 
-### 17.4 Mengapa proses pengambilan menggunakan `Reservasi`?
+## 17.4 Mengapa proses pengambilan menggunakan `Reservasi`?
 
 `Pengambilan` tidak dibuat sebagai proses yang berdiri sendiri.
 
-Pengambilan harus mengacu pada reservasi yang telah dibuat karena informasi perangkat dan penyewa sudah tersedia pada reservasi.
+Pengambilan mengacu pada reservasi yang telah dibuat karena informasi perangkat dan penyewa sudah tersedia pada reservasi.
 
 Hubungannya:
 
-    Reservasi
-       │
-       ├── Penyewa
-       │
-       └── Perangkat
-              ↓
-         Pengambilan
+```text
+Reservasi
+   │
+   ├── Penyewa
+   │
+   └── Perangkat
+          ↓
+     Pengambilan
+```
 
+**Insight:**  
 Pendekatan ini menghindari penginputan ulang data penyewa dan perangkat ketika melakukan pengambilan.
 
 ---
 
-### 17.5 Mengapa logic dipisahkan dari model?
+## 17.5 Mengapa `Logic` dipisahkan dari `Model`?
 
-Class model bertanggung jawab terhadap object dan datanya, sedangkan class logic menangani proses pengelolaan.
+Class `Model` bertanggung jawab terhadap object dan datanya, sedangkan class `Logic` menangani proses pengelolaan.
 
 Contohnya:
 
-    Model
-    └── Reservasi
+```text
+Model
+└── Reservasi
 
-    Logic
-    └── KelolaReservasi
+Logic
+└── KelolaReservasi
+```
 
 `Reservasi` menyimpan informasi reservasi, sedangkan `KelolaReservasi` menangani proses seperti membuat, mencari, dan menampilkan reservasi.
 
-Pemisahan ini membuat kode lebih mudah dipahami dan lebih mudah dikembangkan.
+**Insight:**  
+Pemisahan tanggung jawab membuat struktur program lebih mudah dipahami dan lebih mudah dikembangkan.
 
 ---
 
-# 📊 19. RINGKASAN PENERAPAN PBO
+# 📊 18. RINGKASAN PENERAPAN PBO
 
 | Konsep | Implementasi |
 |---|---|
@@ -920,51 +1024,53 @@ Pemisahan ini membuat kode lebih mudah dipahami dan lebih mudah dikembangkan.
 | **Super** | Constructor dan method superclass dipanggil menggunakan `super` |
 | **Polymorphism** | Overriding `tampilkanInfo()` |
 | **Encapsulation** | Atribut `private`, getter, dan setter |
-| **Constructor** | Digunakan pada seluruh class model |
+| **Constructor** | Digunakan pada class model |
 | **ArrayList** | Menyimpan kumpulan perangkat, reservasi, dan pengambilan |
-| **If-Else** | Validasi status perangkat dan input |
+| **If-Else** | Validasi kondisi proses |
 | **Switch-Case** | Pengaturan menu utama |
 | **For** | Menampilkan dan mencari data dalam collection |
-| **While** | Generate ID dan validasi proses tertentu |
+| **While** | Generate ID |
 | **Do-While** | Menjalankan menu utama sampai pengguna keluar |
 
 ---
 
-# 🔍 20. CONTOH ALUR PROGRAM
+# 🔍 19. CONTOH ALUR PROGRAM
 
 Salah satu alur penggunaan sistem:
 
-    1. Program dijalankan
-           ↓
-    2. Menu utama ditampilkan
-           ↓
-    3. Pengguna melihat perangkat
-           ↓
-    4. Pengguna memilih perangkat
-           ↓
-    5. Pengguna membuat reservasi
-           ↓
-    6. Sistem menghitung total harga
-           ↓
-    7. Status perangkat menjadi Direservasi
-           ↓
-    8. Pengguna mencatat pengambilan
-           ↓
-    9. Status reservasi diperbarui
-           ↓
-    10. Status perangkat diperbarui
-           ↓
-    11. Pengguna dapat melihat data
-           ↓
-    12. Pengguna keluar dari program
+```text
+1. Program dijalankan
+        ↓
+2. Menu utama ditampilkan
+        ↓
+3. Pengguna melihat perangkat
+        ↓
+4. Pengguna memilih perangkat
+        ↓
+5. Pengguna membuat reservasi
+        ↓
+6. Sistem menghitung total harga
+        ↓
+7. Status perangkat menjadi Direservasi
+        ↓
+8. Pengguna mencatat pengambilan
+        ↓
+9. Status reservasi diperbarui
+        ↓
+10. Status perangkat diperbarui
+        ↓
+11. Pengguna dapat melihat data
+        ↓
+12. Pengguna keluar dari program
+```
 
 Alur tersebut menunjukkan bahwa setiap fitur saling berhubungan dan bukan sekadar kumpulan menu yang berdiri sendiri.
 
 ---
 
-# 📝 23. KESIMPULAN
+# 📝 20. KESIMPULAN
 
-Sistem Penyewaan Perangkat merupakan aplikasi Java Console yang mengimplementasikan konsep Object-Oriented Programming melalui beberapa class yang saling berhubungan.
+**Sistem Penyewaan Perangkat** merupakan aplikasi Java Console yang mengimplementasikan konsep **Object-Oriented Programming** melalui beberapa class yang saling berhubungan.
 
 Konsep **inheritance** diterapkan melalui hubungan `Perangkat` dengan `Kamera` dan `Drone`. **Polymorphism** diterapkan melalui overriding method `tampilkanInfo()`. **Encapsulation** diterapkan melalui penggunaan atribut `private` serta getter dan setter.
 
@@ -972,19 +1078,18 @@ Selain konsep utama PBO, program juga menerapkan constructor, `ArrayList`, perca
 
 Dari sisi perancangan, pembagian `Model`, `Logic`, dan `Main` membuat program lebih terstruktur karena setiap bagian memiliki tanggung jawab yang berbeda.
 
-Alur `Penyewa → Reservasi → Perangkat → Pengambilan` juga membuat program memiliki proses bisnis yang saling terhubung sehingga program tidak hanya menampilkan data, tetapi mampu mensimulasikan proses penyewaan dari awal sampai pengambilan perangkat.
+Alur `Penyewa → Reservasi → Perangkat → Pengambilan` membuat program memiliki proses bisnis yang saling terhubung sehingga program tidak hanya menampilkan data, tetapi juga mensimulasikan proses penyewaan hingga pengambilan perangkat.
 
 ---
 
-# 🎓 24. PENUTUP
+# 🎓 21. PENUTUP
 
 Melalui proyek ini, konsep-konsep Pemrograman Berorientasi Objek tidak hanya diterapkan secara terpisah, tetapi digunakan untuk membangun sebuah sistem yang memiliki hubungan antarclass dan alur proses yang jelas.
 
-Perancangan sistem menunjukkan bahwa pemilihan struktur class sangat berpengaruh terhadap keteraturan program. Dengan adanya superclass, subclass, encapsulation, polymorphism, collection, serta pemisahan logic, program menjadi lebih mudah dipahami dan memiliki dasar yang lebih baik untuk dikembangkan.
+Perancangan sistem menunjukkan bahwa pemilihan struktur class berpengaruh terhadap keteraturan program. Dengan adanya superclass, subclass, encapsulation, polymorphism, collection, serta pemisahan logic, program menjadi lebih mudah dipahami dan memiliki dasar yang lebih baik untuk dikembangkan.
 
 Pengembangan selanjutnya dapat diarahkan pada penggunaan database, antarmuka GUI atau web, autentikasi pengguna, sistem pembayaran, pengembalian perangkat, serta pengelolaan riwayat penyewaan.
 
----
-       Status Perangkat
+### ✨ Konsep Utama
 
-**Konsep utama:** Class, Object, Inheritance, Encapsulation, Polymorphism, Constructor, ArrayList, Percabangan, dan Perulangan.
+`Class` · `Object` · `Inheritance` · `Encapsulation` · `Polymorphism` · `Constructor` · `ArrayList` · `Percabangan` · `Perulangan`

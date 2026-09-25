@@ -89,6 +89,14 @@ Tujuan pembuatan program ini adalah:
 
 # 🧩 4. STRUKTUR PROJECT
 
+<table border="1" bordercolor="black">
+  <tr>
+    <td>
+      <img src="https://github.com" width="100%">
+    </td>
+  </tr>
+</table>
+
 ~~~text
 Source Packages
 │
@@ -381,12 +389,26 @@ Inheritance diterapkan melalui hubungan antara `Perangkat`, `Kamera`, dan `Drone
 ~~~java
 public class Kamera extends Perangkat {
 ~~~
+<table border="1" bordercolor="black">
+  <tr>
+    <td>
+      <img src="https://github.com" width="100%">
+    </td>
+  </tr>
+</table>
 
 ### Implementasi pada `Drone`
 
 ~~~java
 public class Drone extends Perangkat {
 ~~~
+<table border="1" bordercolor="black">
+  <tr>
+    <td>
+      <img src="https://github.com" width="100%">
+    </td>
+  </tr>
+</table>
 
 Keyword `extends` menunjukkan bahwa `Kamera` dan `Drone` merupakan subclass dari `Perangkat`.
 
@@ -436,12 +458,26 @@ super(
     status
 );
 ~~~
+<table border="1" bordercolor="black">
+  <tr>
+    <td>
+      <img src="https://github.com" width="100%">
+    </td>
+  </tr>
+</table>
 
 Method superclass juga dapat dipanggil menggunakan:
 
 ~~~java
 super.tampilkanInfo();
 ~~~
+<table border="1" bordercolor="black">
+  <tr>
+    <td>
+      <img src="https://github.com" width="100%">
+    </td>
+  </tr>
+</table>
 
 ## Fungsi `super()`
 
@@ -484,6 +520,13 @@ public void tampilkanInfo() {
     );
 }
 ~~~
+<table border="1" bordercolor="black">
+  <tr>
+    <td>
+      <img src="https://github.com" width="100%">
+    </td>
+  </tr>
+</table>
 
 ## 9.2 Overriding pada `Drone`
 
@@ -505,6 +548,13 @@ public void tampilkanInfo() {
     );
 }
 ~~~
+<table border="1" bordercolor="black">
+  <tr>
+    <td>
+      <img src="https://github.com" width="100%">
+    </td>
+  </tr>
+</table>
 
 ## 9.3 Pengujian Polymorphism
 
@@ -534,6 +584,13 @@ Perangkat perangkat2 =
 perangkat1.tampilkanInfo();
 perangkat2.tampilkanInfo();
 ~~~
+<table border="1" bordercolor="black">
+  <tr>
+    <td>
+      <img src="https://github.com" width="100%">
+    </td>
+  </tr>
+</table>
 
 ### Insight
 
@@ -556,6 +613,13 @@ Contoh:
 ~~~java
 private String status;
 ~~~
+<table border="1" bordercolor="black">
+  <tr>
+    <td>
+      <img src="https://github.com" width="100%">
+    </td>
+  </tr>
+</table>
 
 Untuk mengambil nilai digunakan getter:
 
@@ -564,6 +628,13 @@ public String getStatus() {
     return status;
 }
 ~~~
+<table border="1" bordercolor="black">
+  <tr>
+    <td>
+      <img src="https://github.com" width="100%">
+    </td>
+  </tr>
+</table>
 
 Untuk mengubah nilai digunakan setter:
 
@@ -572,6 +643,13 @@ public void setStatus(String status) {
     this.status = status;
 }
 ~~~
+<table border="1" bordercolor="black">
+  <tr>
+    <td>
+      <img src="https://github.com" width="100%">
+    </td>
+  </tr>
+</table>
 
 ### Fungsi
 
@@ -586,12 +664,26 @@ Akses langsung seperti berikut tidak digunakan:
 ~~~java
 perangkat.status = "Disewa";
 ~~~
+<table border="1" bordercolor="black">
+  <tr>
+    <td>
+      <img src="https://github.com" width="100%">
+    </td>
+  </tr>
+</table>
 
 Perubahan dilakukan melalui setter:
 
 ~~~java
 perangkat.setStatus("Disewa");
 ~~~
+<table border="1" bordercolor="black">
+  <tr>
+    <td>
+      <img src="https://github.com" width="100%">
+    </td>
+  </tr>
+</table>
 
 ### Insight
 
@@ -620,6 +712,13 @@ public Perangkat(
     this.status = status;
 }
 ~~~
+<table border="1" bordercolor="black">
+  <tr>
+    <td>
+      <img src="https://github.com" width="100%">
+    </td>
+  </tr>
+</table>
 
 ### Fungsi
 
@@ -642,6 +741,13 @@ Contoh pada `KelolaReservasi`:
 ~~~java
 private ArrayList<Reservasi> daftarReservasi;
 ~~~
+<table border="1" bordercolor="black">
+  <tr>
+    <td>
+      <img src="https://github.com" width="100%">
+    </td>
+  </tr>
+</table>
 
 Inisialisasi:
 
@@ -650,12 +756,26 @@ public KelolaReservasi() {
     daftarReservasi = new ArrayList<>();
 }
 ~~~
+<table border="1" bordercolor="black">
+  <tr>
+    <td>
+      <img src="https://github.com" width="100%">
+    </td>
+  </tr>
+</table>
 
 Menambahkan data:
 
 ~~~java
 daftarReservasi.add(reservasi);
 ~~~
+<table border="1" bordercolor="black">
+  <tr>
+    <td>
+      <img src="https://github.com" width="100%">
+    </td>
+  </tr>
+</table>
 
 Menampilkan data:
 
@@ -666,6 +786,13 @@ for (Reservasi reservasi
     reservasi.tampilkanInfo();
 }
 ~~~
+<table border="1" bordercolor="black">
+  <tr>
+    <td>
+      <img src="https://github.com" width="100%">
+    </td>
+  </tr>
+</table>
 
 ### Fungsi
 
@@ -707,6 +834,13 @@ Implementasi:
 String id =
         String.format("R%03d", nomor);
 ~~~
+<table border="1" bordercolor="black">
+  <tr>
+    <td>
+      <img src="https://github.com" width="100%">
+    </td>
+  </tr>
+</table>
 
 Pengecekan:
 
@@ -717,6 +851,13 @@ if (cariReservasi(id) == null) {
 
 nomor++;
 ~~~
+<table border="1" bordercolor="black">
+  <tr>
+    <td>
+      <img src="https://github.com" width="100%">
+    </td>
+  </tr>
+</table>
 
 ## 13.2 ID Pengambilan
 
@@ -756,6 +897,13 @@ public double hitungTotalHarga() {
             * lamaSewa;
 }
 ~~~
+<table border="1" bordercolor="black">
+  <tr>
+    <td>
+      <img src="https://github.com" width="100%">
+    </td>
+  </tr>
+</table>
 
 ### Contoh
 
@@ -767,6 +915,13 @@ Total Harga
 = Rp250.000 × 2
 = Rp500.000
 ~~~
+<table border="1" bordercolor="black">
+  <tr>
+    <td>
+      <img src="https://github.com" width="100%">
+    </td>
+  </tr>
+</table>
 
 ### Insight
 
@@ -793,12 +948,26 @@ Ketika reservasi berhasil:
 ~~~java
 perangkat.setStatus("Direservasi");
 ~~~
+<table border="1" bordercolor="black">
+  <tr>
+    <td>
+      <img src="https://github.com" width="100%">
+    </td>
+  </tr>
+</table>
 
 Ketika pengambilan berhasil:
 
 ~~~java
 perangkat.setStatus("Disewa");
 ~~~
+<table border="1" bordercolor="black">
+  <tr>
+    <td>
+      <img src="https://github.com" width="100%">
+    </td>
+  </tr>
+</table>
 
 ### Insight
 
@@ -856,6 +1025,13 @@ if (perangkat.getStatus()
     );
 }
 ~~~
+<table border="1" bordercolor="black">
+  <tr>
+    <td>
+      <img src="https://github.com" width="100%">
+    </td>
+  </tr>
+</table>
 
 ### Fungsi
 
@@ -895,6 +1071,13 @@ switch (pilihan) {
         break;
 }
 ~~~
+<table border="1" bordercolor="black">
+  <tr>
+    <td>
+      <img src="https://github.com" width="100%">
+    </td>
+  </tr>
+</table>
 
 ### Insight
 
@@ -917,6 +1100,13 @@ if (perangkat.getStatus()
     );
 }
 ~~~
+<table border="1" bordercolor="black">
+  <tr>
+    <td>
+      <img src="https://github.com" width="100%">
+    </td>
+  </tr>
+</table>
 
 ### Insight
 
@@ -935,6 +1125,13 @@ for (Reservasi reservasi
     reservasi.tampilkanInfo();
 }
 ~~~
+<table border="1" bordercolor="black">
+  <tr>
+    <td>
+      <img src="https://github.com" width="100%">
+    </td>
+  </tr>
+</table>
 
 ### Insight
 
@@ -957,6 +1154,13 @@ while (true) {
     nomor++;
 }
 ~~~
+<table border="1" bordercolor="black">
+  <tr>
+    <td>
+      <img src="https://github.com" width="100%">
+    </td>
+  </tr>
+</table>
 
 ### Insight
 
@@ -979,6 +1183,13 @@ do {
 
 } while (pilihan != 14);
 ~~~
+<table border="1" bordercolor="black">
+  <tr>
+    <td>
+      <img src="https://github.com" width="100%">
+    </td>
+  </tr>
+</table>
 
 ### Insight
 
@@ -1085,12 +1296,26 @@ Pada `Reservasi`:
 private Penyewa penyewa;
 private Perangkat perangkat;
 ~~~
+<table border="1" bordercolor="black">
+  <tr>
+    <td>
+      <img src="https://github.com" width="100%">
+    </td>
+  </tr>
+</table>
 
 Pada `Pengambilan`:
 
 ~~~java
 private Reservasi reservasi;
 ~~~
+<table border="1" bordercolor="black">
+  <tr>
+    <td>
+      <img src="https://github.com" width="100%">
+    </td>
+  </tr>
+</table>
 
 ### Contoh akses object
 
@@ -1099,12 +1324,26 @@ Mengambil nama penyewa:
 ~~~java
 reservasi.getPenyewa().getNamaPenyewa();
 ~~~
+<table border="1" bordercolor="black">
+  <tr>
+    <td>
+      <img src="https://github.com" width="100%">
+    </td>
+  </tr>
+</table>
 
 Mengambil nama perangkat:
 
 ~~~java
 reservasi.getPerangkat().getNamaPerangkat();
 ~~~
+<table border="1" bordercolor="black">
+  <tr>
+    <td>
+      <img src="https://github.com" width="100%">
+    </td>
+  </tr>
+</table>
 
 ### Insight
 
@@ -1277,9 +1516,13 @@ screenshots/
 
 ## 24.1 Menu Utama
 
-**File:** `menu-utama.png`
-
-![Menu Utama](screenshots/menu-utama.png)
+<table border="1" bordercolor="black">
+  <tr>
+    <td>
+      <img src="https://github.com" width="100%">
+    </td>
+  </tr>
+</table>
 
 Menampilkan seluruh pilihan fitur yang tersedia dalam program.
 
@@ -1287,9 +1530,13 @@ Menampilkan seluruh pilihan fitur yang tersedia dalam program.
 
 ## 24.2 Data Perangkat
 
-**File:** `data-perangkat.png`
-
-![Data Perangkat](screenshots/data-perangkat.png)
+<table border="1" bordercolor="black">
+  <tr>
+    <td>
+      <img src="https://github.com" width="100%">
+    </td>
+  </tr>
+</table>
 
 Menampilkan seluruh perangkat yang tersimpan dalam sistem.
 
@@ -1297,9 +1544,13 @@ Menampilkan seluruh perangkat yang tersimpan dalam sistem.
 
 ## 24.3 Tambah Kamera
 
-**File:** `tambah-kamera.png`
-
-![Tambah Kamera](screenshots/tambah-kamera.png)
+<table border="1" bordercolor="black">
+  <tr>
+    <td>
+      <img src="https://github.com" width="100%">
+    </td>
+  </tr>
+</table>
 
 Menampilkan proses penambahan data kamera.
 
@@ -1307,9 +1558,13 @@ Menampilkan proses penambahan data kamera.
 
 ## 24.4 Tambah Drone
 
-**File:** `tambah-drone.png`
-
-![Tambah Drone](screenshots/tambah-drone.png)
+<table border="1" bordercolor="black">
+  <tr>
+    <td>
+      <img src="https://github.com" width="100%">
+    </td>
+  </tr>
+</table>
 
 Menampilkan proses penambahan data drone.
 
@@ -1317,9 +1572,13 @@ Menampilkan proses penambahan data drone.
 
 ## 24.5 Cari Perangkat
 
-**File:** `cari-perangkat.png`
-
-![Cari Perangkat](screenshots/cari-perangkat.png)
+<table border="1" bordercolor="black">
+  <tr>
+    <td>
+      <img src="https://github.com" width="100%">
+    </td>
+  </tr>
+</table>
 
 Menampilkan proses pencarian perangkat berdasarkan ID.
 
@@ -1327,9 +1586,13 @@ Menampilkan proses pencarian perangkat berdasarkan ID.
 
 ## 24.6 Ubah Status Perangkat
 
-**File:** `ubah-status.png`
-
-![Ubah Status](screenshots/ubah-status.png)
+<table border="1" bordercolor="black">
+  <tr>
+    <td>
+      <img src="https://github.com" width="100%">
+    </td>
+  </tr>
+</table>
 
 Menampilkan proses perubahan status perangkat.
 
@@ -1337,9 +1600,13 @@ Menampilkan proses perubahan status perangkat.
 
 ## 24.7 Hapus Perangkat
 
-**File:** `hapus-perangkat.png`
-
-![Hapus Perangkat](screenshots/hapus-perangkat.png)
+<table border="1" bordercolor="black">
+  <tr>
+    <td>
+      <img src="https://github.com" width="100%">
+    </td>
+  </tr>
+</table>
 
 Menampilkan proses penghapusan perangkat.
 
@@ -1347,9 +1614,13 @@ Menampilkan proses penghapusan perangkat.
 
 ## 24.8 Dashboard Sistem
 
-**File:** `dashboard.png`
-
-![Dashboard](screenshots/dashboard.png)
+<table border="1" bordercolor="black">
+  <tr>
+    <td>
+      <img src="https://github.com" width="100%">
+    </td>
+  </tr>
+</table>
 
 Menampilkan ringkasan data yang terdapat dalam sistem.
 
@@ -1357,9 +1628,13 @@ Menampilkan ringkasan data yang terdapat dalam sistem.
 
 ## 24.9 Rekomendasi Perangkat
 
-**File:** `rekomendasi.png`
-
-![Rekomendasi](screenshots/rekomendasi.png)
+<table border="1" bordercolor="black">
+  <tr>
+    <td>
+      <img src="https://github.com" width="100%">
+    </td>
+  </tr>
+</table>
 
 Menampilkan hasil rekomendasi perangkat berdasarkan kebutuhan pengguna.
 
@@ -1367,9 +1642,13 @@ Menampilkan hasil rekomendasi perangkat berdasarkan kebutuhan pengguna.
 
 ## 24.10 Pembuatan Reservasi
 
-**File:** `buat-reservasi.png`
-
-![Buat Reservasi](screenshots/buat-reservasi.png)
+<table border="1" bordercolor="black">
+  <tr>
+    <td>
+      <img src="https://github.com" width="100%">
+    </td>
+  </tr>
+</table>
 
 Menampilkan proses pembuatan reservasi, generate ID, dan perhitungan total harga.
 
@@ -1377,9 +1656,13 @@ Menampilkan proses pembuatan reservasi, generate ID, dan perhitungan total harga
 
 ## 24.11 Data Reservasi
 
-**File:** `data-reservasi.png`
-
-![Data Reservasi](screenshots/data-reservasi.png)
+<table border="1" bordercolor="black">
+  <tr>
+    <td>
+      <img src="https://github.com" width="100%">
+    </td>
+  </tr>
+</table>
 
 Menampilkan seluruh reservasi yang telah tersimpan.
 
@@ -1387,9 +1670,13 @@ Menampilkan seluruh reservasi yang telah tersimpan.
 
 ## 24.12 Pencatatan Pengambilan
 
-**File:** `catat-pengambilan.png`
-
-![Catat Pengambilan](screenshots/catat-pengambilan.png)
+<table border="1" bordercolor="black">
+  <tr>
+    <td>
+      <img src="https://github.com" width="100%">
+    </td>
+  </tr>
+</table>
 
 Menampilkan proses pencatatan pengambilan perangkat.
 
@@ -1397,9 +1684,13 @@ Menampilkan proses pencatatan pengambilan perangkat.
 
 ## 24.13 Data Pengambilan
 
-**File:** `data-pengambilan.png`
-
-![Data Pengambilan](screenshots/data-pengambilan.png)
+<table border="1" bordercolor="black">
+  <tr>
+    <td>
+      <img src="https://github.com" width="100%">
+    </td>
+  </tr>
+</table>
 
 Menampilkan seluruh data pengambilan yang telah tersimpan.
 
@@ -1407,9 +1698,13 @@ Menampilkan seluruh data pengambilan yang telah tersimpan.
 
 ## 24.14 Demo Polymorphism
 
-**File:** `demo-polymorphism.png`
-
-![Demo Polymorphism](screenshots/demo-polymorphism.png)
+<table border="1" bordercolor="black">
+  <tr>
+    <td>
+      <img src="https://github.com" width="100%">
+    </td>
+  </tr>
+</table>
 
 Menampilkan hasil overriding method `tampilkanInfo()` pada `Kamera` dan `Drone`.
 
@@ -1417,9 +1712,13 @@ Menampilkan hasil overriding method `tampilkanInfo()` pada `Kamera` dan `Drone`.
 
 ## 24.15 Keluar Program
 
-**File:** `keluar.png`
-
-![Keluar Program](screenshots/keluar.png)
+<table border="1" bordercolor="black">
+  <tr>
+    <td>
+      <img src="https://github.com" width="100%">
+    </td>
+  </tr>
+</table>
 
 Menampilkan output ketika pengguna memilih menu keluar.
 

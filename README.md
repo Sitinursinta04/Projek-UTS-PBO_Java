@@ -1,149 +1,113 @@
 # 📷 SISTEM PENYEWAAN PERANGKAT
 
-# 👤 Identitas
-
-**Nama:** Siti Nursinta  
-**NIM:** [Isi NIM]  
-**Mata Kuliah:** Pemrograman Berorientasi Objek  
-**Studi Kasus:** Sistem Penyewaan Perangkat
-
-## 📌 Deskripsi Proyek
-
-**Sistem Penyewaan Perangkat** merupakan aplikasi berbasis **Java Console/CLI** yang dibuat untuk membantu proses pengelolaan penyewaan perangkat, khususnya **kamera dan drone**.
-
-Program ini dibuat sebagai penerapan konsep **Object-Oriented Programming (OOP)** ke dalam sebuah studi kasus yang dekat dengan proses bisnis nyata. Sistem tidak hanya digunakan untuk menampilkan data perangkat, tetapi juga mengelola proses penyewaan mulai dari pengelolaan perangkat, data penyewa, reservasi, hingga pengambilan perangkat.
-
-Konsep PBO yang diterapkan dalam program meliputi:
-
-- 🧬 Inheritance
-- 🔄 Polymorphism
-- 🔐 Encapsulation
-- 🏗️ Constructor
-- 📋 ArrayList
-- 🔀 If-Else
-- 🔀 Switch-Case
-- 🔁 For
-- 🔁 While
-- 🔁 Do-While
-- 🔗 Relasi antarobject
-
-Melalui proyek ini, konsep PBO tidak hanya diterapkan secara sintaksis, tetapi digunakan untuk membangun struktur program yang menggambarkan hubungan antarobjek dalam sistem penyewaan.
+> **Aplikasi Java Console untuk Mengelola Penyewaan Kamera dan Drone**
 
 ---
 
-# 🎯 Tujuan Pembuatan Program
+## 👤 Identitas
 
-Program ini dibuat dengan tujuan:
-
-- 📦 Mengelola data perangkat yang dapat disewa.
-- 📷 Mengelola perangkat berupa kamera.
-- 🚁 Mengelola perangkat berupa drone.
-- 👤 Mengelola data penyewa.
-- 📅 Membuat dan mengelola reservasi perangkat.
-- 📦 Mencatat proses pengambilan perangkat.
-- 💰 Menghitung total biaya penyewaan.
-- 🧬 Menerapkan konsep inheritance.
-- 🔄 Menerapkan polymorphism melalui method overriding.
-- 🔐 Menerapkan encapsulation menggunakan `private`, getter, dan setter.
-- 🔀 Menerapkan percabangan `if-else` dan `switch-case`.
-- 🔁 Menerapkan perulangan `for`, `while`, dan `do-while`.
-- 📋 Menggunakan `ArrayList` untuk menyimpan data secara dinamis.
-- 🧩 Membagi program ke dalam beberapa class berdasarkan tanggung jawabnya.
+| Keterangan | Data |
+|---|---|
+| **Nama** | Siti Nursinta |
+| **NIM** | [Isi NIM] |
+| **Mata Kuliah** | Pemrograman Berorientasi Objek |
+| **Bahasa Pemrograman** | Java |
+| **Platform** | NetBeans |
+| **Jenis Aplikasi** | Console / CLI |
+| **Studi Kasus** | Sistem Penyewaan Perangkat |
 
 ---
 
-# 🏪 Latar Belakang Studi Kasus
+# 📌 1. Deskripsi Proyek
 
-Penyewaan kamera dan drone membutuhkan pengelolaan data yang cukup banyak. Data tersebut meliputi informasi perangkat, harga sewa, status perangkat, data penyewa, reservasi, hingga proses pengambilan perangkat.
+**Sistem Penyewaan Perangkat** merupakan aplikasi berbasis Java Console yang dirancang untuk membantu proses pengelolaan penyewaan perangkat fotografi dan videografi, khususnya **kamera dan drone**.
 
-Apabila proses tersebut dilakukan secara manual, pengelolaan data dapat menjadi kurang terstruktur, terutama ketika jumlah perangkat dan penyewa semakin bertambah.
+Program tidak hanya digunakan untuk menyimpan data perangkat, tetapi juga menggambarkan alur penyewaan secara sederhana, mulai dari pengelolaan perangkat, pencatatan penyewa, pembuatan reservasi, hingga proses pengambilan perangkat.
 
-Berdasarkan permasalahan tersebut, dibuat **Sistem Penyewaan Perangkat** yang dapat membantu menggambarkan proses penyewaan secara terstruktur menggunakan Java.
-
-Sistem ini memiliki alur yang saling berhubungan. Perangkat yang awalnya berstatus **Tersedia** dapat dibuatkan reservasi sehingga statusnya berubah menjadi **Direservasi**. Setelah proses pengambilan dilakukan, status reservasi berubah menjadi **Selesai** dan perangkat berubah menjadi **Disewa**.
-
-Dengan demikian, program tidak hanya berfungsi sebagai penyimpanan data, tetapi juga menggambarkan proses bisnis sederhana dari sebuah sistem penyewaan.
+Aplikasi ini dirancang dengan menerapkan konsep **Object-Oriented Programming (OOP)** sehingga setiap objek memiliki data dan tanggung jawab yang jelas. Struktur program juga dipisahkan menjadi beberapa bagian, yaitu **Model, Logic, dan Main**, agar kode lebih terorganisasi dan mudah dikembangkan.
 
 ---
 
-# 🏪 Studi Kasus dan Ruang Lingkup Sistem
+# 🎯 2. Latar Belakang dan Permasalahan
 
-Studi kasus yang digunakan adalah **sistem penyewaan perangkat kamera dan drone**.
+Dalam proses penyewaan perangkat, pengelolaan data perlu dilakukan dengan terstruktur agar informasi mengenai perangkat, penyewa, reservasi, dan pengambilan tidak tercampur.
 
-Objek utama dalam sistem terdiri dari:
+Beberapa proses yang perlu diperhatikan dalam sistem penyewaan antara lain:
 
-### 📷 1. Perangkat
+- mengetahui perangkat yang tersedia;
+- menambahkan perangkat baru;
+- memperbarui status perangkat;
+- menghapus perangkat;
+- mencari perangkat berdasarkan ID;
+- mencatat data penyewa;
+- membuat reservasi;
+- menghitung total biaya berdasarkan lama sewa;
+- mencatat proses pengambilan perangkat.
 
-`Perangkat` merupakan superclass yang menyimpan karakteristik umum dari perangkat.
+Berdasarkan kebutuhan tersebut, dibuat sebuah program sederhana yang menggambarkan proses penyewaan perangkat secara terintegrasi melalui aplikasi Java Console.
 
-Atribut yang dimiliki:
+---
+
+# 💡 3. Tujuan Pembuatan Program
+
+Program ini dibuat untuk:
+
+1. Menerapkan konsep **Inheritance** pada Java melalui hubungan antara `Perangkat`, `Kamera`, dan `Drone`.
+2. Menerapkan **Polymorphism** melalui method `tampilkanInfo()` yang memiliki perilaku berbeda sesuai objek turunannya.
+3. Menerapkan **Encapsulation** melalui penggunaan atribut `private` serta getter dan setter.
+4. Mengelola kumpulan objek menggunakan `ArrayList`.
+5. Menerapkan struktur kontrol seperti `if-else`, `switch-case`, `for`, `while`, dan `do-while`.
+6. Menggambarkan alur bisnis sederhana dari proses reservasi sampai pengambilan perangkat.
+7. Membuat program yang terstruktur sehingga lebih mudah dipahami dan dikembangkan.
+
+---
+
+# 🏢 4. Gambaran Sistem
+
+Sistem terdiri dari tiga bagian utama dalam proses bisnis:
+
+### 📦 Pengelolaan Perangkat
+
+Bagian ini mengatur data perangkat yang tersedia dalam sistem, baik kamera maupun drone.
+
+Perangkat memiliki informasi umum seperti:
 
 - ID perangkat
-- Nama perangkat
-- Harga sewa
-- Status perangkat
+- nama perangkat
+- harga sewa
+- status perangkat
 
-### 📸 2. Kamera
+Sementara perangkat turunan memiliki informasi tambahan sesuai jenisnya.
 
-`Kamera` merupakan subclass dari `Perangkat`.
+### 📅 Reservasi
 
-Selain mewarisi informasi umum dari `Perangkat`, kamera memiliki atribut khusus:
+Reservasi menghubungkan **penyewa** dengan **perangkat** yang ingin digunakan.
 
-- Resolusi
-- Jenis kamera
+Saat reservasi berhasil dibuat, status perangkat berubah dari:
 
-### 🚁 3. Drone
+`Tersedia → Direservasi`
 
-`Drone` juga merupakan subclass dari `Perangkat`.
+Sistem juga menghitung total biaya berdasarkan harga sewa perangkat dan lama penyewaan.
 
-Atribut khusus yang dimiliki:
+### 📦 Pengambilan
 
-- Resolusi kamera
-- Durasi terbang
+Pengambilan merupakan tahap lanjutan setelah reservasi dibuat.
 
-### 👤 4. Penyewa
+Ketika perangkat berhasil diambil:
 
-`Penyewa` digunakan untuk menyimpan informasi orang yang melakukan penyewaan.
+`Status Reservasi: Dikonfirmasi → Selesai`
 
-Data yang disimpan:
+dan status perangkat berubah menjadi:
 
-- ID penyewa
-- Nama penyewa
-- Nomor telepon
-- Alamat
+`Direservasi → Disewa`
 
-### 📅 5. Reservasi
-
-`Reservasi` digunakan untuk merepresentasikan proses pemesanan perangkat.
-
-Data yang disimpan:
-
-- ID reservasi
-- Penyewa
-- Perangkat
-- Tanggal reservasi
-- Lama sewa
-- Status reservasi
-
-Class ini juga memiliki method `hitungTotalHarga()` untuk menghitung total biaya penyewaan.
-
-### 📦 6. Pengambilan
-
-`Pengambilan` digunakan untuk mencatat proses ketika perangkat yang telah dipesan diambil oleh penyewa.
-
-Data yang disimpan:
-
-- ID pengambilan
-- Reservasi
-- Tanggal pengambilan
-- Jam pengambilan
-- Status pengambilan
+Dengan demikian, perubahan status dalam program menggambarkan perubahan kondisi perangkat selama proses penyewaan.
 
 ---
 
-# 🏗️ Struktur Class
+# 🧩 5. Struktur Class
 
-Struktur class pada program dibagi menjadi tiga package utama:
+Program dibagi menjadi tiga package utama:
 
     Source Packages
     │
@@ -163,1043 +127,598 @@ Struktur class pada program dibagi menjadi tiga package utama:
         ├── Reservasi.java
         └── Pengambilan.java
 
-Pembagian package tersebut dibuat berdasarkan tanggung jawab masing-masing bagian.
-
-### 📁 Model
-
-Berisi class yang merepresentasikan objek dalam sistem, seperti `Perangkat`, `Kamera`, `Drone`, `Penyewa`, `Reservasi`, dan `Pengambilan`.
-
-### 📁 Logic
-
-Berisi class yang menangani proses pengelolaan data, seperti menambah, mencari, menampilkan, dan mengelola reservasi serta pengambilan.
-
-### 📁 Main
-
-Berisi class utama yang menjalankan program dan menyediakan menu interaksi dengan pengguna.
-
-### 💡 Insight
-
-Pembagian tersebut membuat program tidak menumpuk dalam satu class. Jika suatu saat terjadi perubahan pada proses reservasi, bagian yang perlu diperbaiki dapat lebih mudah ditemukan tanpa harus mengubah keseluruhan program.
+Pembagian tersebut membuat program memiliki tanggung jawab yang lebih jelas. Package `Model` berisi objek dan data, `Logic` menangani proses pengelolaan data, sedangkan `Main` menjadi pusat interaksi pengguna dengan sistem.
 
 ---
 
-# 🧬 Hierarki Inheritance
+# 🌳 6. Hierarki dan Relasi Class
 
-Inheritance atau pewarisan diterapkan dengan menjadikan `Perangkat` sebagai superclass dan `Kamera` serta `Drone` sebagai subclass.
-
-    Perangkat
-       │
-       ├──────────────┐
-       ↓              ↓
-    Kamera          Drone
-
-Implementasi pada Java:
-
-    public class Kamera extends Perangkat
-
-dan:
-
-    public class Drone extends Perangkat
-
-Dengan menggunakan `extends`, class `Kamera` dan `Drone` dapat mewarisi atribut dan method yang berasal dari `Perangkat`.
-
-### 📌 Atribut umum yang diwariskan
-
-    Perangkat
-    ├── idPerangkat
-    ├── namaPerangkat
-    ├── hargaSewa
-    ├── status
-    └── tampilkanInfo()
-
-Kemudian masing-masing subclass memiliki atribut tambahan.
-
-    Kamera
-    ├── resolusi
-    └── jenisKamera
-
-    Drone
-    ├── resolusiKamera
-    └── durasiTerbang
-
-### 💡 Insight Inheritance
-
-Inheritance digunakan karena kamera dan drone memiliki karakteristik dasar yang sama. Keduanya merupakan perangkat yang memiliki ID, nama, harga sewa, dan status.
-
-Jika atribut tersebut ditulis ulang pada setiap subclass, akan terjadi pengulangan kode.
-
-Dengan inheritance, informasi umum cukup diletakkan pada `Perangkat`, sedangkan subclass hanya menambahkan karakteristik yang memang khusus untuk jenis perangkat tersebut.
-
-Hal ini membuat struktur program menjadi lebih **efisien, terorganisasi, dan mudah dikembangkan**.
-
-Apabila di masa depan ingin menambahkan perangkat lain seperti action camera atau microphone, perangkat tersebut dapat dikembangkan menggunakan struktur yang sudah ada.
-
----
-
-# 🔄 Polymorphism
-
-Polymorphism diterapkan menggunakan **method overriding**.
-
-Pada superclass `Perangkat` terdapat method:
-
-    public void tampilkanInfo()
-
-Method tersebut kemudian di-override oleh subclass `Kamera` dan `Drone`.
-
-Contoh pada `Kamera`:
-
-    @Override
-    public void tampilkanInfo() {
-
-        super.tampilkanInfo();
-
-        System.out.println(
-                "Resolusi       : "
-                + resolusi);
-
-        System.out.println(
-                "Jenis Kamera   : "
-                + jenisKamera);
-    }
-
-Sedangkan pada `Drone`:
-
-    @Override
-    public void tampilkanInfo() {
-
-        super.tampilkanInfo();
-
-        System.out.println(
-                "Resolusi Kamera: "
-                + resolusiKamera);
-
-        System.out.println(
-                "Durasi Terbang : "
-                + durasiTerbang
-                + " menit");
-    }
-
-Program juga menunjukkan polymorphism melalui:
-
-    Perangkat perangkat1 = new Kamera(...);
-    Perangkat perangkat2 = new Drone(...);
-
-Kemudian:
-
-    perangkat1.tampilkanInfo();
-    perangkat2.tampilkanInfo();
-
-Meskipun referensinya menggunakan tipe `Perangkat`, method yang dijalankan mengikuti object sebenarnya, yaitu `Kamera` atau `Drone`.
-
-### 💡 Insight Polymorphism
-
-Polymorphism membuat satu method dapat memiliki perilaku yang berbeda sesuai dengan object yang digunakan.
-
-Hal ini sesuai dengan kondisi sistem karena kamera dan drone sama-sama merupakan perangkat, tetapi informasi khusus yang perlu ditampilkan berbeda.
-
-Kamera menampilkan informasi mengenai jenis kamera dan resolusi, sedangkan drone menampilkan resolusi kamera dan durasi terbang.
-
-Dengan polymorphism, program tidak perlu membuat banyak nama method berbeda. Satu method `tampilkanInfo()` dapat digunakan dan disesuaikan oleh masing-masing subclass.
-
----
-
-# 🔐 Encapsulation
-
-Encapsulation diterapkan dengan menggunakan access modifier `private` pada atribut class.
-
-Contohnya:
-
-    private String idPerangkat;
-    private String namaPerangkat;
-    private double hargaSewa;
-    private String status;
-
-Atribut tersebut tidak diakses secara langsung dari luar class.
-
-Untuk mengambil data digunakan getter:
-
-    public String getNamaPerangkat()
-
-Untuk mengubah data tertentu digunakan setter:
-
-    public void setStatus(String status)
-
-### 💡 Insight Encapsulation
-
-Encapsulation membantu menjaga data agar tidak dapat diubah secara sembarangan dari luar class.
-
-Contohnya, status perangkat dapat diubah melalui method:
-
-    perangkat.setStatus("Disewa");
-
-Dengan pendekatan tersebut, akses terhadap data menjadi lebih terkontrol.
-
-Selain itu, jika di masa depan diperlukan validasi sebelum sebuah data diubah, validasi dapat ditempatkan di dalam setter tanpa mengubah kode yang menggunakan object tersebut.
-
----
-
-# 🔗 Relasi Antarobject
-
-Selain inheritance, terdapat hubungan antarobject dalam sistem.
-
-Relasi utama dapat digambarkan sebagai:
-
-    Penyewa
-       │
-       ↓
-    Reservasi
-       │
-       ↓
-    Perangkat
-       │
-       ↓
-    Pengambilan
-
-Class `Reservasi` memiliki object `Penyewa` dan `Perangkat`:
-
-    private Penyewa penyewa;
-    private Perangkat perangkat;
-
-Sedangkan `Pengambilan` memiliki object `Reservasi`:
-
-    private Reservasi reservasi;
-
-Hubungan tersebut menunjukkan bahwa object dalam program tidak berdiri sendiri.
-
-### 💡 Insight
-
-Relasi antarobject membuat program lebih dekat dengan kondisi nyata.
-
-Dalam dunia nyata, seorang penyewa melakukan reservasi terhadap suatu perangkat. Setelah reservasi dibuat, proses berikutnya adalah pengambilan perangkat.
-
-Hubungan tersebut kemudian diterjemahkan ke dalam object sehingga alur program menjadi lebih mudah dipahami.
-
----
-
-# 📅 Alur Kerja Sistem
-
-Alur utama penyewaan:
-
-    📷 Perangkat tersedia
-             ↓
-    👤 Penyewa melakukan reservasi
-             ↓
-    📅 Reservasi dikonfirmasi
-             ↓
-    🔄 Status perangkat = Direservasi
-             ↓
-    📦 Penyewa melakukan pengambilan
-             ↓
-    ✅ Status reservasi = Selesai
-             ↓
-    🚁 Status perangkat = Disewa
-
-Alur tersebut membuat setiap proses memiliki hubungan dengan proses berikutnya.
-
-### 💡 Insight
-
-Status perangkat digunakan sebagai salah satu bentuk pengendalian proses.
-
-Program tidak hanya menyimpan bahwa suatu perangkat pernah dipesan, tetapi juga mengetahui kondisi perangkat saat ini.
-
-Hal tersebut merupakan contoh sederhana bagaimana data dalam program dapat digunakan untuk merepresentasikan kondisi sebuah proses bisnis.
-
----
-
-# 💰 Perhitungan Total Harga
-
-Total biaya penyewaan dihitung menggunakan rumus:
-
-    Total Harga = Harga Sewa × Lama Sewa
-
-Implementasi:
-
-    public double hitungTotalHarga() {
-        return perangkat.getHargaSewa() * lamaSewa;
-    }
-
-Contoh:
-
-    Harga Sewa : Rp250000/hari
-    Lama Sewa  : 2 hari
-
-    Total Harga : Rp500000
-
-### 💡 Insight
-
-Perhitungan total harga ditempatkan pada class `Reservasi` karena `Reservasi` memiliki informasi mengenai perangkat yang disewa dan lama penyewaan.
-
-Dengan begitu, proses perhitungan menjadi bagian dari object yang memang bertanggung jawab terhadap data tersebut.
-
----
-
-# 📋 ArrayList
-
-Program menggunakan `ArrayList` untuk menyimpan data secara dinamis.
-
-Contohnya:
-
-    private ArrayList<Reservasi> daftarReservasi;
-
-dan:
-
-    private ArrayList<Pengambilan> daftarPengambilan;
-
-Data kemudian ditambahkan menggunakan:
-
-    daftarReservasi.add(reservasi);
-
-### 💡 Insight
-
-`ArrayList` dipilih karena jumlah perangkat, reservasi, dan pengambilan tidak selalu diketahui sejak awal.
-
-Berbeda dengan array biasa yang memiliki ukuran tetap, `ArrayList` dapat bertambah ketika pengguna memasukkan data baru.
-
-Hal tersebut membuat struktur penyimpanan data lebih sesuai dengan kebutuhan sistem penyewaan.
-
----
-
-# 🔁 Implementasi Looping
-
-Program menggunakan tiga jenis perulangan.
-
-## 🔄 1. For
-
-Digunakan untuk menelusuri data yang terdapat dalam `ArrayList`.
-
-Contoh:
-
-    for (Reservasi reservasi : daftarReservasi) {
-        reservasi.tampilkanInfo();
-    }
-
-Perulangan ini cocok digunakan ketika program perlu memproses setiap data yang terdapat dalam daftar.
-
----
-
-## 🔄 2. While
-
-Digunakan untuk proses yang membutuhkan pengulangan sampai kondisi tertentu terpenuhi.
-
-Contohnya pada proses pembuatan ID:
-
-    while (true) {
-        ...
-    }
-
-`while` juga digunakan untuk membantu proses validasi input.
-
----
-
-## 🔄 3. Do-While
-
-Menu utama menggunakan `do-while`:
-
-    do {
-        ...
-    } while (pilihan != 14);
-
-Dengan struktur tersebut, menu akan ditampilkan terlebih dahulu kemudian program memeriksa apakah pengguna memilih keluar.
-
-### 💡 Insight
-
-Pemilihan jenis looping disesuaikan dengan kebutuhan.
-
-- `for` → menelusuri kumpulan data.
-- `while` → mengulang proses selama kondisi masih terpenuhi.
-- `do-while` → menjalankan menu minimal satu kali sebelum memeriksa kondisi keluar.
-
----
-
-# 🔀 Implementasi If-Else
-
-`if-else` digunakan untuk pengambilan keputusan berdasarkan kondisi.
-
-Contoh pada proses reservasi:
-
-    if (perangkat.getStatus()
-            .equalsIgnoreCase("Tersedia")) {
-
-        // Reservasi dibuat
-
-    } else {
-
-        // Perangkat tidak dapat direservasi
-    }
-
-Program juga menggunakan `if-else` untuk:
-
-- mengecek perangkat tersedia atau tidak,
-- mengecek reservasi ditemukan atau tidak,
-- mengecek lama sewa valid atau tidak,
-- mengecek apakah data sudah tersedia,
-- menentukan status perangkat.
-
-### 💡 Insight
-
-Percabangan membuat program dapat memberikan respons yang berbeda berdasarkan keadaan sistem.
-
-Misalnya, perangkat yang sudah `Direservasi` tidak seharusnya diperlakukan sama dengan perangkat yang masih `Tersedia`.
-
----
-
-# 🔀 Implementasi Switch-Case
-
-`switch-case` digunakan pada menu utama.
-
-Contohnya:
-
-    switch (pilihan) {
-
-        case 1:
-            // Tampilkan semua perangkat
-            break;
-
-        case 2:
-            // Tambah kamera
-            break;
-
-        case 9:
-            // Buat reservasi
-            break;
-
-        case 14:
-            // Keluar
-            break;
-    }
-
-Setiap nomor menu memiliki fungsi yang berbeda.
-
-Penggunaan `switch-case` membuat pengelolaan pilihan menu menjadi lebih terstruktur dan mudah dibaca.
-
----
-
-# 🖥️ Fitur Utama Program
-
-| No. | Fitur | Keterangan |
-|---|---|---|
-| 1 | 📋 Tampilkan Semua Perangkat | Menampilkan seluruh perangkat |
-| 2 | 📷 Tambah Kamera | Menambahkan perangkat kamera |
-| 3 | 🚁 Tambah Drone | Menambahkan perangkat drone |
-| 4 | 🔍 Cari Perangkat | Mencari perangkat berdasarkan ID |
-| 5 | 🔄 Ubah Status Perangkat | Mengubah status perangkat |
-| 6 | 🗑️ Hapus Perangkat | Menghapus data perangkat |
-| 7 | 📊 Dashboard Sistem | Menampilkan ringkasan sistem |
-| 8 | 💡 Rekomendasi Perangkat | Memberikan rekomendasi berdasarkan kebutuhan |
-| 9 | 📅 Buat Reservasi | Membuat reservasi perangkat |
-| 10 | 📋 Tampilkan Semua Reservasi | Menampilkan seluruh data reservasi |
-| 11 | 📦 Catat Pengambilan | Mencatat proses pengambilan |
-| 12 | 📋 Tampilkan Semua Pengambilan | Menampilkan seluruh data pengambilan |
-| 13 | 🔄 Demo Polymorphism | Menampilkan penerapan polymorphism |
-| 14 | 🚪 Keluar | Mengakhiri program |
-
----
-
-# 💡 Insight dari Perancangan Program
-
-Bagian terpenting dari proyek ini bukan hanya bagaimana program dapat dijalankan, tetapi bagaimana konsep PBO digunakan untuk **memodelkan masalah nyata menjadi objek yang saling berhubungan**.
-
-## 🧠 Insight 1 — OOP membantu memecah masalah
-
-Permasalahan penyewaan tidak dibuat menjadi satu proses besar.
-
-Program memecahnya menjadi beberapa objek:
-
-    Perangkat
-    Kamera
-    Drone
-    Penyewa
-    Reservasi
-    Pengambilan
-
-Setiap object mempunyai tanggung jawab masing-masing.
-
-Dengan cara tersebut, kompleksitas program dapat dibagi menjadi bagian-bagian yang lebih kecil dan mudah dipahami.
-
----
-
-## 🧠 Insight 2 — Inheritance mengurangi duplikasi
-
-Kamera dan drone sama-sama memiliki informasi dasar sebagai perangkat.
-
-Daripada membuat atribut yang sama berulang kali, atribut umum diletakkan pada `Perangkat`.
-
-Subclass kemudian hanya menambahkan atribut yang spesifik.
-
-Hal ini membuat program lebih ringkas dan struktur class lebih jelas.
-
----
-
-## 🧠 Insight 3 — Polymorphism memberikan fleksibilitas
-
-Method `tampilkanInfo()` digunakan oleh beberapa jenis perangkat.
-
-Setiap subclass dapat menentukan informasi tambahan yang ditampilkan.
-
-Dengan demikian, jika sistem memiliki jenis perangkat baru, struktur polymorphism dapat dikembangkan tanpa mengubah konsep dasar superclass.
-
----
-
-## 🧠 Insight 4 — Encapsulation menjaga data
-
-Data object dibuat `private` dan diakses menggunakan getter serta setter.
-
-Hal ini membuat perubahan data lebih terkontrol.
-
-Contohnya, perubahan status perangkat dilakukan melalui method `setStatus()`.
-
-Pendekatan tersebut juga memberikan ruang untuk menambahkan validasi apabila sistem dikembangkan lebih lanjut.
-
----
-
-## 🧠 Insight 5 — Status perangkat menggambarkan proses bisnis
-
-Status perangkat bukan hanya data biasa.
-
-Status tersebut menggambarkan kondisi perangkat dalam proses penyewaan:
-
-    Tersedia
-        ↓
-    Direservasi
-        ↓
-    Disewa
-
-Perubahan status menunjukkan bahwa program mencoba merepresentasikan kondisi nyata dari perangkat.
-
----
-
-## 🧠 Insight 6 — Class memiliki tanggung jawab masing-masing
-
-`Reservasi` bertanggung jawab terhadap proses reservasi.
-
-`Pengambilan` bertanggung jawab terhadap proses pengambilan.
-
-`KelolaReservasi` bertanggung jawab terhadap pengelolaan data reservasi.
-
-`KelolaPengambilan` bertanggung jawab terhadap pengelolaan data pengambilan.
-
-Pembagian tersebut membuat kode lebih terorganisasi dan mengurangi ketergantungan terhadap satu class saja.
-
----
-
-## 🧠 Insight 7 — Program dapat dikembangkan
-
-Sistem yang dibuat masih berupa aplikasi console, tetapi struktur class yang digunakan dapat menjadi dasar untuk pengembangan lebih lanjut.
-
-Beberapa pengembangan yang memungkinkan:
-
-- 💳 Sistem pembayaran
-- 📄 Cetak bukti penyewaan
-- 🔔 Notifikasi pengembalian
-- 📊 Laporan pendapatan
-- 👥 Login admin
-- 🗄️ Database
-- 📈 Riwayat penyewaan
-- 🔎 Filter perangkat
-- 📅 Kalender ketersediaan perangkat
-
-Dengan demikian, proyek ini dapat menjadi dasar dari sistem penyewaan yang lebih kompleks.
-
----
-
-# 🧪 Skenario Pengujian Program
-
-Pengujian dilakukan menggunakan beberapa skenario untuk memastikan fitur utama berjalan.
-
-## 📋 1. Menampilkan Data Perangkat
-
-Program dijalankan kemudian memilih menu:
-
-    1. Tampilkan Semua Perangkat
-
-Data kamera dan drone yang tersedia ditampilkan.
-
----
-
-## 📷 2. Menambahkan Kamera
-
-Data yang digunakan:
-
-    ID          : K004
-    Nama        : Canon EOS R5
-    Harga Sewa  : Rp300000
-    Resolusi    : 45 MP
-    Jenis       : Mirrorless
-
-Data kemudian ditambahkan ke daftar perangkat.
-
----
-
-## 🚁 3. Menambahkan Drone
-
-Data yang digunakan:
-
-    ID              : D003
-    Nama            : DJI Mavic 3
-    Harga Sewa      : Rp600000
-    Resolusi Kamera : 48 MP
-    Durasi Terbang  : 46 menit
-
-Data kemudian ditambahkan ke daftar perangkat.
-
----
-
-## 🔍 4. Mencari Perangkat
-
-Perangkat `K004` dicari berdasarkan ID.
-
-Jika ditemukan, program menampilkan informasi perangkat tersebut.
-
----
-
-## 🔄 5. Mengubah Status
-
-Perangkat `D003` digunakan sebagai contoh perubahan status.
-
-    Tersedia → Disewa
-
-Perubahan dilakukan melalui menu ubah status.
-
----
-
-## 🗑️ 6. Menghapus Perangkat
-
-Perangkat `K003` digunakan sebagai contoh penghapusan data.
-
-Setelah proses berhasil, perangkat tersebut tidak lagi berada di dalam daftar perangkat.
-
----
-
-## 💡 7. Menggunakan Rekomendasi
-
-Pengguna memilih:
-
-    1. Fotografi
-
-Program kemudian menampilkan rekomendasi perangkat sesuai kategori yang dipilih.
-
----
-
-## 📅 8. Membuat Reservasi
-
-Data penyewa:
-
-    ID Penyewa : P001
-    Nama       : Andi Pratama
-    No. Telepon: 081234567890
-    Alamat     : Jl. Merdeka
-
-Perangkat:
-
-    ID         : K001
-    Perangkat  : Canon EOS R6
-
-Reservasi:
-
-    Tanggal    : 25-09-2026
-    Lama Sewa  : 2 hari
-
-Harga:
-
-    Rp250000 × 2 hari = Rp500000
-
-Reservasi berhasil dibuat dengan:
-
-    ID Reservasi : R001
-
-Status perangkat kemudian berubah:
-
-    Tersedia → Direservasi
-
----
-
-## 📦 9. Mencatat Pengambilan
-
-Reservasi `R001` digunakan untuk proses pengambilan.
-
-Data:
-
-    Tanggal Pengambilan : 25-09-2026
-    Jam Pengambilan     : sesuai input pengguna
-
-Jika berhasil, program menghasilkan:
-
-    ID Pengambilan : PG001
-
-Kemudian:
-
-    Status Reservasi : Selesai
-    Status Perangkat : Disewa
-
----
-
-## 🔄 10. Demo Polymorphism
-
-Program membuat object:
-
-    Perangkat perangkat1 = new Kamera(...);
-    Perangkat perangkat2 = new Drone(...);
-
-Kemudian menjalankan:
-
-    perangkat1.tampilkanInfo();
-    perangkat2.tampilkanInfo();
-
-Output menunjukkan bahwa method `tampilkanInfo()` memberikan informasi yang sesuai dengan jenis object.
-
----
-
-# 📸 Dokumentasi Screenshot Output Program
-
-Screenshot hasil running program dapat disimpan di dalam folder:
-
-    screenshots/
-
-Berikut daftar screenshot yang digunakan:
-
-## 🖥️ 1. Menu Utama
-
-File:
-
-    screenshots/menu-utama.png
-
-Menampilkan seluruh menu yang tersedia pada sistem.
-
----
-
-## 📋 2. Data Perangkat
-
-File:
-
-    screenshots/data-perangkat.png
-
-Menampilkan data kamera dan drone yang tersedia.
-
----
-
-## 📷 3. Tambah Kamera
-
-File:
-
-    screenshots/tambah-kamera.png
-
-Menampilkan proses penambahan kamera `K004`.
-
----
-
-## 🚁 4. Tambah Drone
-
-File:
-
-    screenshots/tambah-drone.png
-
-Menampilkan proses penambahan drone `D003`.
-
----
-
-## 🔍 5. Cari Perangkat
-
-File:
-
-    screenshots/cari-perangkat.png
-
-Menampilkan proses pencarian perangkat `K004`.
-
----
-
-## 🔄 6. Ubah Status
-
-File:
-
-    screenshots/ubah-status.png
-
-Menampilkan proses perubahan status perangkat `D003`.
-
----
-
-## 🗑️ 7. Hapus Perangkat
-
-File:
-
-    screenshots/hapus-perangkat.png
-
-Menampilkan proses penghapusan perangkat `K003`.
-
----
-
-## 📊 8. Dashboard Sistem
-
-File:
-
-    screenshots/dashboard.png
-
-Menampilkan ringkasan informasi sistem.
-
----
-
-## 💡 9. Rekomendasi Perangkat
-
-File:
-
-    screenshots/rekomendasi.png
-
-Menampilkan hasil rekomendasi untuk kebutuhan fotografi.
-
----
-
-## 📅 10. Membuat Reservasi
-
-File:
-
-    screenshots/buat-reservasi.png
-
-Menampilkan proses pembuatan reservasi `R001`.
-
----
-
-## 📋 11. Data Reservasi
-
-File:
-
-    screenshots/data-reservasi.png
-
-Menampilkan data reservasi yang telah dibuat.
-
----
-
-## 📦 12. Catat Pengambilan
-
-File:
-
-    screenshots/catat-pengambilan.png
-
-Menampilkan proses pencatatan pengambilan `PG001`.
-
----
-
-## 📋 13. Data Pengambilan
-
-File:
-
-    screenshots/data-pengambilan.png
-
-Menampilkan data pengambilan yang telah dicatat.
-
----
-
-## 🔄 14. Demo Polymorphism
-
-File:
-
-    screenshots/demo-polymorphism.png
-
-Menampilkan penerapan method overriding pada `Kamera` dan `Drone`.
-
----
-
-## 🚪 15. Keluar
-
-File:
-
-    screenshots/keluar.png
-
-Menampilkan pesan ketika pengguna memilih menu keluar.
-
----
-
-# 🧬 Dokumentasi Implementasi Konsep PBO
-
-Selain output program, source code juga dapat didokumentasikan melalui screenshot.
-
-## 🧬 Inheritance
-
-Screenshot bagian:
-
-    public class Kamera extends Perangkat
-
-dan:
-
-    public class Drone extends Perangkat
-
-Screenshot tersebut menunjukkan hubungan superclass dan subclass.
-
----
-
-## 🔄 Polymorphism
-
-Screenshot bagian:
-
-    @Override
-    public void tampilkanInfo()
-
-pada class `Kamera` dan `Drone`.
-
----
-
-## 🔐 Encapsulation
-
-Screenshot bagian atribut:
-
-    private String namaPerangkat;
-
-serta getter dan setter yang digunakan untuk mengakses data.
-
----
-
-## 🏗️ Constructor
-
-Screenshot constructor pada masing-masing class untuk menunjukkan proses inisialisasi object.
-
----
-
-## 🔗 Super
-
-Screenshot penggunaan:
-
-    super(...);
-
-dan:
-
-    super.tampilkanInfo();
-
-untuk menunjukkan pemanggilan constructor dan method dari superclass.
-
----
-
-# 📁 Struktur Repository GitHub
-
-Struktur repository:
-
-    SistemPenyewaanPerangkat/
-    │
-    ├── src/
-    │   └── main/
-    │       └── java/
-    │           ├── Logic/
-    │           │   ├── KelolaPerangkat.java
-    │           │   ├── KelolaReservasi.java
-    │           │   └── KelolaPengambilan.java
-    │           │
-    │           ├── Main/
-    │           │   └── SistemPenyewaanPerangkat.java
-    │           │
-    │           └── Model/
-    │               ├── Perangkat.java
-    │               ├── Kamera.java
-    │               ├── Drone.java
-    │               ├── Penyewa.java
-    │               ├── Reservasi.java
-    │               └── Pengambilan.java
-    │
-    ├── screenshots/
-    │   ├── menu-utama.png
-    │   ├── data-perangkat.png
-    │   ├── tambah-kamera.png
-    │   ├── tambah-drone.png
-    │   ├── cari-perangkat.png
-    │   ├── ubah-status.png
-    │   ├── hapus-perangkat.png
-    │   ├── dashboard.png
-    │   ├── rekomendasi.png
-    │   ├── buat-reservasi.png
-    │   ├── data-reservasi.png
-    │   ├── catat-pengambilan.png
-    │   ├── data-pengambilan.png
-    │   ├── demo-polymorphism.png
-    │   └── keluar.png
-    │
-    └── README.md
-
----
-
-# 📊 Ringkasan Implementasi Ketentuan PBO
-
-| Ketentuan | Implementasi dalam Program |
-|---|---|
-| 🧬 Inheritance | `Perangkat` menjadi superclass untuk `Kamera` dan `Drone` |
-| 🔄 Polymorphism | Method overriding `tampilkanInfo()` |
-| 🔐 Encapsulation | Atribut `private`, getter, dan setter |
-| 🏗️ Constructor | Digunakan untuk membuat dan menginisialisasi object |
-| 🔗 Super | Digunakan untuk memanggil constructor dan method superclass |
-| 🔀 If-Else | Validasi status perangkat dan proses sistem |
-| 🔀 Switch-Case | Pengaturan menu utama |
-| 🔁 For | Menelusuri data pada `ArrayList` |
-| 🔁 While | Generate ID dan proses validasi |
-| 🔁 Do-While | Perulangan menu utama |
-| 📋 ArrayList | Menyimpan data perangkat, reservasi, dan pengambilan |
-| 🧩 Class & Object | Model sistem dibuat dalam beberapa class |
-| 🔗 Relasi Object | Penyewa, Reservasi, Perangkat, dan Pengambilan saling berhubungan |
-
----
-
-# 📌 Kesesuaian Program dengan Konsep PBO
-
-Program ini menerapkan konsep PBO tidak hanya dalam bentuk teori, tetapi juga dalam bentuk implementasi yang saling berhubungan.
-
-### 🧬 Inheritance
-
-Hubungan:
+## Hierarki Inheritance
 
     Perangkat
        ├── Kamera
        └── Drone
 
-### 🔄 Polymorphism
+`Kamera` dan `Drone` merupakan turunan dari `Perangkat`.
 
-Method:
+Keduanya mewarisi informasi umum perangkat, kemudian menambahkan karakteristik khusus sesuai jenis perangkat.
 
-    tampilkanInfo()
+## Relasi Antarobjek
 
-diimplementasikan kembali pada subclass dengan `@Override`.
+    Penyewa
+        │
+        ▼
+    Reservasi ───────► Perangkat
+        │
+        ▼
+    Pengambilan
 
-### 🔐 Encapsulation
+`Reservasi` menyimpan hubungan antara penyewa dan perangkat yang digunakan.
 
-Data object disimpan menggunakan atribut `private` dan diakses melalui getter serta setter.
-
-### 🏗️ Constructor
-
-Constructor digunakan untuk memberikan nilai awal ketika object dibuat.
-
-### 🔗 Object Relationship
-
-Object `Penyewa` berhubungan dengan `Reservasi`, `Reservasi` berhubungan dengan `Perangkat`, dan `Pengambilan` berhubungan dengan `Reservasi`.
-
-### 🔀 Control Flow
-
-Program menggunakan:
-
-    if-else
-    switch-case
-    for
-    while
-    do-while
-
-sebagai bagian dari proses pengambilan keputusan dan pengulangan.
+`Pengambilan` kemudian menggunakan data reservasi sebagai dasar untuk mencatat proses pengambilan perangkat.
 
 ---
 
-# 📝 Kesimpulan
+# 🧱 7. Penjelasan Setiap Class
 
-**Sistem Penyewaan Perangkat** merupakan aplikasi Java Console/CLI yang mengimplementasikan konsep **Object-Oriented Programming** melalui studi kasus penyewaan kamera dan drone.
+## `Perangkat`
 
-Program berhasil menggabungkan beberapa konsep PBO seperti **inheritance, polymorphism, encapsulation, constructor, penggunaan `super`, ArrayList, percabangan, dan perulangan** ke dalam sebuah sistem yang memiliki alur proses yang saling berhubungan.
+Merupakan **superclass** yang menjadi dasar bagi jenis perangkat dalam sistem.
 
-Pembagian class menjadi `Model`, `Logic`, dan `Main` membuat program lebih terstruktur. Setiap class memiliki peran masing-masing sehingga program tidak hanya dapat berjalan, tetapi juga lebih mudah dipahami dan dikembangkan.
-
-Dari sisi pemodelan, `Perangkat` digunakan sebagai superclass karena kamera dan drone memiliki karakteristik umum yang sama. Sementara itu, `Kamera` dan `Drone` menambahkan karakteristik masing-masing untuk menunjukkan perbedaan antarjenis perangkat.
-
-Penggunaan polymorphism melalui method `tampilkanInfo()` juga menunjukkan bahwa satu method dapat memiliki perilaku yang berbeda sesuai dengan object yang digunakan.
+Class ini menyimpan atribut umum yang dimiliki oleh semua perangkat dan menyediakan method `tampilkanInfo()` sebagai method yang dapat digunakan oleh subclass.
 
 ---
 
-# 🌱 Penutup
+## `Kamera`
 
-Melalui proyek ini, konsep PBO dapat dipahami sebagai lebih dari sekadar penggunaan syntax Java.
+Merupakan subclass dari `Perangkat`.
 
-PBO membantu mengubah sebuah permasalahan nyata menjadi kumpulan object yang memiliki **data, perilaku, dan hubungan** satu sama lain.
+Selain mewarisi atribut dan method dari `Perangkat`, kamera memiliki informasi khusus seperti resolusi dan jenis kamera.
 
-Pada sistem ini, perangkat, penyewa, reservasi, dan pengambilan tidak dibuat secara terpisah tanpa hubungan. Semua object tersebut disusun untuk membentuk alur penyewaan yang lebih realistis.
+Class ini juga melakukan **method overriding** terhadap `tampilkanInfo()` agar informasi khusus kamera dapat ditampilkan.
 
-✨ **Insight utama dari proyek ini adalah bahwa penerapan PBO dapat membuat program lebih terstruktur karena setiap bagian sistem dapat direpresentasikan melalui object yang memiliki tanggung jawab tertentu.**
+---
 
-Dengan struktur yang sudah dibuat, sistem masih dapat dikembangkan lebih lanjut menjadi aplikasi yang lebih kompleks, misalnya dengan penambahan database, sistem pembayaran, autentikasi pengguna, laporan penyewaan, maupun antarmuka berbasis GUI atau web.
+## `Drone`
+
+Merupakan subclass dari `Perangkat`.
+
+Drone memiliki karakteristik tambahan berupa resolusi kamera dan durasi terbang.
+
+Sama seperti `Kamera`, class `Drone` melakukan overriding terhadap method `tampilkanInfo()`.
+
+---
+
+## `Penyewa`
+
+Menyimpan informasi mengenai pihak yang melakukan penyewaan.
+
+Data penyewa digunakan ketika proses reservasi dibuat sehingga sebuah reservasi dapat dikaitkan dengan penyewa tertentu.
+
+---
+
+## `Reservasi`
+
+Berfungsi merepresentasikan proses pemesanan perangkat.
+
+Class ini menghubungkan:
+
+- penyewa;
+- perangkat;
+- tanggal reservasi;
+- lama sewa;
+- status reservasi.
+
+Class `Reservasi` juga memiliki method `hitungTotalHarga()` yang digunakan untuk menghitung biaya berdasarkan harga sewa perangkat dan lama penyewaan.
+
+---
+
+## `Pengambilan`
+
+Merepresentasikan proses pengambilan perangkat setelah reservasi dibuat.
+
+Data pengambilan terhubung dengan objek `Reservasi`, sehingga informasi penyewa dan perangkat dapat diperoleh melalui reservasi tersebut.
+
+---
+
+# 🧠 8. Penerapan Konsep OOP
+
+## 🔹 Inheritance
+
+Inheritance diterapkan dengan menggunakan `extends`.
+
+    Kamera extends Perangkat
+    Drone extends Perangkat
+
+Konsep ini memungkinkan atribut dan method umum yang terdapat pada `Perangkat` digunakan kembali oleh `Kamera` dan `Drone`.
+
+Pendekatan ini menghindari penulisan atribut umum yang sama secara berulang pada setiap jenis perangkat.
+
+---
+
+## 🔹 `super`
+
+Constructor pada `Kamera` dan `Drone` menggunakan `super()` untuk memanggil constructor dari superclass `Perangkat`.
+
+Selain itu, method `tampilkanInfo()` pada subclass menggunakan `super.tampilkanInfo()` agar informasi umum perangkat tetap ditampilkan sebelum informasi khusus masing-masing perangkat.
+
+---
+
+## 🔹 Polymorphism
+
+Polymorphism diterapkan melalui overriding method `tampilkanInfo()`.
+
+Contohnya:
+
+    Perangkat perangkat1 = new Kamera(...);
+    Perangkat perangkat2 = new Drone(...);
+
+Walaupun tipe referensinya adalah `Perangkat`, Java akan menjalankan method `tampilkanInfo()` sesuai objek sebenarnya.
+
+Dengan demikian:
+
+- objek `Kamera` menampilkan informasi kamera;
+- objek `Drone` menampilkan informasi drone.
+
+Implementasi ini dapat diuji melalui menu **Demo Polymorphism** pada program.
+
+---
+
+## 🔹 Encapsulation
+
+Setiap atribut pada class model dibuat menggunakan access modifier `private`.
+
+Akses terhadap data dilakukan melalui getter dan setter.
+
+Pendekatan ini membuat data objek tidak dapat diubah secara langsung dari luar class dan memberikan kontrol terhadap bagaimana data tersebut digunakan.
+
+Contohnya terdapat pada atribut seperti:
+
+    private String status;
+
+Perubahan status dilakukan melalui:
+
+    setStatus()
+
+bukan dengan mengakses atribut secara langsung.
+
+---
+
+# ⚙️ 9. Implementasi Control Flow
+
+Struktur kontrol digunakan untuk mengatur bagaimana program menerima input dan menentukan proses yang harus dijalankan.
+
+### `switch-case`
+
+Digunakan pada menu utama untuk menentukan fitur berdasarkan pilihan pengguna.
+
+Setiap nomor menu memiliki proses yang berbeda, seperti menambah perangkat, melakukan reservasi, hingga keluar dari program.
+
+### `if-else`
+
+Digunakan untuk menangani kondisi tertentu, misalnya:
+
+- memeriksa apakah perangkat tersedia;
+- memeriksa validitas lama sewa;
+- menentukan perubahan status;
+- memeriksa apakah data ditemukan.
+
+### `for`
+
+Digunakan ketika program perlu melakukan iterasi terhadap data yang tersimpan dalam `ArrayList`.
+
+### `while`
+
+Digunakan dalam proses seperti:
+
+- validasi input;
+- pencarian ID yang tersedia;
+- pembuatan ID otomatis.
+
+### `do-while`
+
+Digunakan pada menu utama agar menu tetap ditampilkan dan program terus berjalan sampai pengguna memilih menu **Keluar**.
+
+---
+
+# 🗂️ 10. Pengelolaan Data dengan ArrayList
+
+Data perangkat, reservasi, dan pengambilan dikelola menggunakan `ArrayList`.
+
+Pendekatan ini dipilih karena jumlah data dalam sistem tidak ditentukan sejak awal.
+
+Ketika pengguna menambahkan perangkat baru, objek tersebut dapat langsung dimasukkan ke dalam `ArrayList`.
+
+Hal ini membuat program lebih fleksibel dibandingkan menggunakan array dengan ukuran tetap.
+
+Pengelolaan data dipisahkan melalui class:
+
+- `KelolaPerangkat`
+- `KelolaReservasi`
+- `KelolaPengambilan`
+
+Dengan pemisahan tersebut, proses pengelolaan tidak menumpuk di dalam class `Main`.
+
+---
+
+# 🔄 11. Alur Proses Bisnis Sistem
+
+Secara umum, proses sistem dapat digambarkan sebagai berikut:
+
+    Mulai
+      │
+      ▼
+    Menu Utama
+      │
+      ├── Kelola Perangkat
+      │      ├── Tambah
+      │      ├── Cari
+      │      ├── Ubah Status
+      │      └── Hapus
+      │
+      ├── Buat Reservasi
+      │      │
+      │      ▼
+      │   Periksa Status Perangkat
+      │      │
+      │      ▼
+      │   Reservasi Berhasil
+      │      │
+      │      ▼
+      │   Status = Direservasi
+      │
+      ├── Catat Pengambilan
+      │      │
+      │      ▼
+      │   Reservasi Diproses
+      │      │
+      │      ▼
+      │   Status Reservasi = Selesai
+      │   Status Perangkat = Disewa
+      │
+      └── Keluar
+             │
+             ▼
+           Selesai
+
+Alur tersebut menunjukkan bahwa fitur dalam program tidak berdiri sendiri, tetapi saling berhubungan melalui objek dan perubahan status.
+
+---
+
+# 🛠️ 12. Fitur Utama Program
+
+Program menyediakan beberapa fitur utama:
+
+| Menu | Fitur | Fungsi |
+|---|---|---|
+| 1 | Tampilkan Semua Perangkat | Melihat seluruh perangkat |
+| 2 | Tambah Kamera | Menambahkan kamera |
+| 3 | Tambah Drone | Menambahkan drone |
+| 4 | Cari Perangkat | Mencari perangkat berdasarkan ID |
+| 5 | Ubah Status | Mengubah status perangkat |
+| 6 | Hapus Perangkat | Menghapus data perangkat |
+| 7 | Dashboard Sistem | Melihat ringkasan sistem |
+| 8 | Rekomendasi Perangkat | Menampilkan rekomendasi berdasarkan kebutuhan |
+| 9 | Buat Reservasi | Membuat reservasi perangkat |
+| 10 | Tampilkan Reservasi | Melihat data reservasi |
+| 11 | Catat Pengambilan | Mencatat pengambilan perangkat |
+| 12 | Tampilkan Pengambilan | Melihat data pengambilan |
+| 13 | Demo Polymorphism | Menunjukkan penerapan polymorphism |
+| 14 | Keluar | Mengakhiri program |
+
+---
+
+# 💡 13. Insight dan Analisis Perancangan
+
+Perancangan program tidak hanya berfokus pada bagaimana membuat menu berjalan, tetapi juga bagaimana setiap objek memiliki peran yang jelas.
+
+### 1. Mengapa `Kamera` dan `Drone` dibuat sebagai subclass?
+
+Kedua perangkat memiliki informasi dasar yang sama, seperti ID, nama, harga sewa, dan status. Namun, keduanya memiliki karakteristik khusus yang berbeda.
+
+Dengan menggunakan inheritance, informasi umum cukup diletakkan pada `Perangkat`, sedangkan karakteristik khusus diletakkan pada subclass masing-masing.
+
+Hal ini membuat struktur program lebih mudah diperluas apabila di kemudian hari terdapat jenis perangkat lain.
+
+---
+
+### 2. Mengapa `Reservasi` dibuat sebagai class tersendiri?
+
+Reservasi bukan hanya sekadar data perangkat atau data penyewa.
+
+Reservasi merupakan objek yang menghubungkan kedua data tersebut sekaligus menyimpan informasi proses penyewaan seperti tanggal, lama sewa, dan status.
+
+Dengan menjadikannya class tersendiri, hubungan tersebut dapat direpresentasikan secara lebih jelas.
+
+---
+
+### 3. Mengapa status perangkat perlu berubah?
+
+Status digunakan untuk merepresentasikan kondisi perangkat dalam proses penyewaan.
+
+Perangkat yang awalnya tersedia dapat berubah menjadi `Direservasi` ketika berhasil dipesan, kemudian menjadi `Disewa` ketika telah diambil.
+
+Perubahan tersebut membuat program tidak hanya berfungsi sebagai penyimpanan data, tetapi juga dapat menggambarkan kondisi perangkat selama proses bisnis berlangsung.
+
+---
+
+### 4. Mengapa proses pengelolaan dipisahkan dari Model?
+
+Class pada package `Model` berfokus pada representasi objek dan datanya.
+
+Sementara class pada package `Logic` bertanggung jawab terhadap proses seperti menambah, mencari, menghapus, dan mengelola data.
+
+Pemisahan ini membuat `Main` tidak perlu menangani seluruh proses secara langsung sehingga struktur program menjadi lebih terorganisasi.
+
+---
+
+### 5. Potensi pengembangan sistem
+
+Struktur program masih dapat dikembangkan lebih lanjut.
+
+Jika sistem dikembangkan menjadi aplikasi yang lebih besar, beberapa pengembangan yang memungkinkan antara lain:
+
+- penyimpanan data menggunakan database;
+- antarmuka berbasis GUI atau web;
+- sistem login untuk admin dan penyewa;
+- validasi data yang lebih lengkap;
+- pengelolaan pengembalian perangkat;
+- perhitungan denda keterlambatan;
+- laporan transaksi;
+- pencarian dan filter perangkat berdasarkan kategori.
+
+Dengan struktur class yang sudah dipisahkan, pengembangan tersebut dapat dilakukan tanpa harus mengubah seluruh bagian program dari awal.
+
+---
+
+# 🧪 14. Skenario Pengujian
+
+Pengujian dilakukan dengan menjalankan setiap fitur utama pada program dan memastikan hasil yang ditampilkan sesuai dengan fungsi yang dirancang.
+
+| Fitur | Tujuan Pengujian | Hasil |
+|---|---|---|
+| Tampilkan Perangkat | Memastikan data perangkat dapat ditampilkan | ✅ Berhasil |
+| Tambah Kamera | Memastikan kamera baru dapat disimpan | ✅ Berhasil |
+| Tambah Drone | Memastikan drone baru dapat disimpan | ✅ Berhasil |
+| Cari Perangkat | Memastikan pencarian berdasarkan ID berjalan | ✅ Berhasil |
+| Ubah Status | Memastikan status perangkat dapat diperbarui | ✅ Berhasil |
+| Hapus Perangkat | Memastikan perangkat dapat dihapus | ✅ Berhasil |
+| Dashboard | Memastikan ringkasan sistem dapat ditampilkan | ✅ Berhasil |
+| Rekomendasi | Memastikan rekomendasi perangkat dapat ditampilkan | ✅ Berhasil |
+| Reservasi | Memastikan perangkat tersedia dapat dipesan | ✅ Berhasil |
+| Pengambilan | Memastikan reservasi dapat diproses | ✅ Berhasil |
+| Polymorphism | Memastikan overriding berjalan sesuai objek | ✅ Berhasil |
+
+Detail input dan output dari pengujian ditunjukkan pada dokumentasi screenshot di bawah.
+
+---
+
+# 🖥️ 15. Dokumentasi Output Program
+
+## 15.1 Menu Utama
+
+Menampilkan daftar fitur yang dapat dipilih pengguna.
+
+**Screenshot:**
+
+![Menu Utama](screenshots/menu-utama.png)
+
+---
+
+## 15.2 Data Perangkat
+
+Menampilkan data perangkat yang tersimpan dalam sistem.
+
+**Screenshot:**
+
+![Data Perangkat](screenshots/data-perangkat.png)
+
+---
+
+## 15.3 Tambah Kamera
+
+Menunjukkan proses penambahan perangkat kamera baru ke dalam sistem.
+
+**Screenshot:**
+
+![Tambah Kamera](screenshots/tambah-kamera.png)
+
+---
+
+## 15.4 Tambah Drone
+
+Menunjukkan proses penambahan perangkat drone.
+
+**Screenshot:**
+
+![Tambah Drone](screenshots/tambah-drone.png)
+
+---
+
+## 15.5 Cari Perangkat
+
+Menunjukkan proses pencarian perangkat berdasarkan ID.
+
+**Screenshot:**
+
+![Cari Perangkat](screenshots/cari-perangkat.png)
+
+---
+
+## 15.6 Ubah Status Perangkat
+
+Menunjukkan proses perubahan status perangkat.
+
+**Screenshot:**
+
+![Ubah Status](screenshots/ubah-status.png)
+
+---
+
+## 15.7 Hapus Perangkat
+
+Menunjukkan proses penghapusan data perangkat.
+
+**Screenshot:**
+
+![Hapus Perangkat](screenshots/hapus-perangkat.png)
+
+---
+
+## 15.8 Dashboard Sistem
+
+Menampilkan ringkasan kondisi data dalam sistem.
+
+**Screenshot:**
+
+![Dashboard](screenshots/dashboard.png)
+
+---
+
+## 15.9 Rekomendasi Perangkat
+
+Menampilkan rekomendasi perangkat berdasarkan kebutuhan pengguna.
+
+**Screenshot:**
+
+![Rekomendasi](screenshots/rekomendasi.png)
+
+---
+
+## 15.10 Pembuatan Reservasi
+
+Menunjukkan proses pembuatan reservasi perangkat.
+
+**Screenshot:**
+
+![Buat Reservasi](screenshots/buat-reservasi.png)
+
+---
+
+## 15.11 Data Reservasi
+
+Menampilkan reservasi yang telah dibuat.
+
+**Screenshot:**
+
+![Data Reservasi](screenshots/data-reservasi.png)
+
+---
+
+## 15.12 Pencatatan Pengambilan
+
+Menunjukkan proses pencatatan pengambilan berdasarkan reservasi.
+
+**Screenshot:**
+
+![Catat Pengambilan](screenshots/catat-pengambilan.png)
+
+---
+
+## 15.13 Data Pengambilan
+
+Menampilkan data pengambilan yang telah dicatat.
+
+**Screenshot:**
+
+![Data Pengambilan](screenshots/data-pengambilan.png)
+
+---
+
+## 15.14 Demo Polymorphism
+
+Menunjukkan bagaimana method yang sama dapat menghasilkan informasi berbeda berdasarkan objek turunannya.
+
+**Screenshot:**
+
+![Demo Polymorphism](screenshots/demo-polymorphism.png)
+
+---
+
+## 15.15 Keluar dari Program
+
+Menampilkan pesan ketika pengguna memilih menu keluar.
+
+**Screenshot:**
+
+![Keluar](screenshots/keluar.png)
+
+---
+
+# 📚 16. Dokumentasi Implementasi Konsep PBO
+
+Selain dokumentasi output, implementasi konsep OOP dapat ditunjukkan melalui screenshot kode berikut:
+
+### Inheritance
+
+Screenshot:
+
+![Inheritance](screenshots/inheritance.png)
+
+Menunjukkan hubungan `Perangkat` sebagai superclass dengan `Kamera` dan `Drone` sebagai subclass.
+
+### Polymorphism
+
+Screenshot:
+
+![Polymorphism](screenshots/polymorphism.png)
+
+Menunjukkan penggunaan overriding method `tampilkanInfo()`.
+
+### Encapsulation
+
+Screenshot:
+
+![Encapsulation](screenshots/encapsulation.png)
+
+Menunjukkan penggunaan atribut `private`, getter, dan setter.
+
+### Pengelolaan ArrayList
+
+Screenshot:
+
+![ArrayList](screenshots/arraylist.png)
+
+Menunjukkan penyimpanan objek menggunakan `ArrayList`.
+
+---
+
+
+# 📊 17. Ringkasan Implementasi
+
+| Konsep / Komponen | Implementasi |
+|---|---|
+| **Inheritance** | `Kamera` dan `Drone` mewarisi `Perangkat` |
+| **Polymorphism** | Overriding `tampilkanInfo()` |
+| **Encapsulation** | Atribut `private`, getter, dan setter |
+| **ArrayList** | Menyimpan perangkat, reservasi, dan pengambilan |
+| **If-Else** | Validasi dan pengambilan keputusan |
+| **Switch-Case** | Pengaturan menu utama |
+| **For** | Iterasi data |
+| **While** | Validasi dan pembuatan ID |
+| **Do-While** | Perulangan menu utama |
+| **Class & Object** | Seluruh entitas sistem direpresentasikan sebagai object |
+| **Package** | Pemisahan Model, Logic, dan Main |
+
+---
+
+# 📝 18. Kesimpulan
+
+Program **Sistem Penyewaan Perangkat** berhasil dibuat sebagai aplikasi Java Console dengan menerapkan konsep dasar Pemrograman Berorientasi Objek.
+
+Program tidak hanya menerapkan konsep OOP pada struktur class, tetapi juga menghubungkan antarobjek melalui alur proses penyewaan. `Perangkat` menjadi dasar untuk jenis perangkat `Kamera` dan `Drone`, sedangkan `Penyewa`, `Reservasi`, dan `Pengambilan` membentuk alur proses bisnis sistem.
+
+Penerapan inheritance, polymorphism, encapsulation, ArrayList, serta berbagai struktur kontrol membuat program memiliki struktur yang lebih terorganisasi dan menggambarkan bagaimana konsep OOP dapat digunakan untuk membangun sebuah sistem sederhana.
+
+---
+
+# 🚀 19. Penutup
+
+Pembuatan proyek ini memberikan gambaran bahwa konsep Pemrograman Berorientasi Objek dapat digunakan untuk memodelkan permasalahan nyata ke dalam bentuk program.
+
+Melalui studi kasus penyewaan perangkat, setiap class dirancang berdasarkan peran yang dimilikinya sehingga hubungan antarobjek dapat direpresentasikan secara lebih terstruktur.
+
+Program ini masih dapat dikembangkan menjadi sistem yang lebih kompleks, terutama dengan penambahan database, antarmuka pengguna, proses pengembalian perangkat, denda keterlambatan, serta sistem laporan. Dengan struktur yang telah dibuat, pengembangan tersebut dapat dilakukan secara bertahap tanpa mengubah keseluruhan rancangan program.
+`[Masukkan link GitHub di sini]`
+
+> Repository berisi source code program, README, serta dokumentasi screenshot hasil pengujian.

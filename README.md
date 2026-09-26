@@ -4,7 +4,7 @@
 
 ---
 
-# 👤 IDENTITAS
+## 👤 IDENTITAS
 
 | Keterangan | Informasi |
 |---|---|
@@ -18,7 +18,7 @@
 
 ---
 
-# 📌 1. DESKRIPSI PROYEK
+## 📌 1. DESKRIPSI PROYEK
 
 **Sistem Penyewaan Perangkat** merupakan aplikasi berbasis Java Console yang dibuat untuk membantu proses pengelolaan penyewaan perangkat, khususnya kamera dan drone.
 
@@ -28,7 +28,7 @@ Program tidak hanya digunakan untuk menyimpan data perangkat, tetapi juga mengat
 
 Program juga menerapkan konsep PBO seperti **class, object, inheritance, superclass, subclass, `extends`, `super`, polymorphism, overriding, encapsulation, constructor, getter, setter, ArrayList, percabangan, dan perulangan**.
 
-## Fitur Utama
+### Fitur Utama
 
 - Menampilkan seluruh perangkat
 - Menambahkan kamera
@@ -48,7 +48,7 @@ Program juga menerapkan konsep PBO seperti **class, object, inheritance, supercl
 
 ---
 
-# 🎯 2. LATAR BELAKANG
+## 🎯 2. LATAR BELAKANG
 
 Dalam proses penyewaan kamera dan drone terdapat beberapa data yang perlu dikelola, seperti data perangkat, data penyewa, reservasi, lama penyewaan, total harga, dan status perangkat.
 
@@ -64,7 +64,7 @@ Dengan rancangan tersebut, setiap class mempunyai tanggung jawab yang lebih jela
 
 ---
 
-# 🎯 3. TUJUAN PROYEK
+## 🎯 3. TUJUAN PROYEK
 
 Tujuan pembuatan program ini adalah:
 
@@ -87,7 +87,7 @@ Tujuan pembuatan program ini adalah:
 
 ---
 
-# 🧩 4. STRUKTUR PROJECT
+## 🧩 4. STRUKTUR PROJECT
 
 <table border="1" bordercolor="black">
   <tr>
@@ -97,7 +97,7 @@ Tujuan pembuatan program ini adalah:
   </tr>
 </table>
 
-## 4.1 Package `Model`
+### 4.1 Package `Model`
 
 Package `Model` berisi class yang merepresentasikan objek dalam sistem.
 
@@ -112,7 +112,7 @@ Class yang terdapat pada package ini adalah:
 
 Class pada package `Model` bertanggung jawab terhadap data object, constructor, getter, setter, dan method yang berhubungan dengan object.
 
-## 4.2 Package `Logic`
+### 4.2 Package `Logic`
 
 Package `Logic` berisi class yang digunakan untuk mengelola object dan menjalankan proses sistem.
 
@@ -122,7 +122,7 @@ Class yang terdapat pada package ini adalah:
 - `KelolaReservasi`
 - `KelolaPengambilan`
 
-## 4.3 Package `Main`
+### 4.3 Package `Main`
 
 Package `Main` berisi class utama:
 
@@ -132,7 +132,7 @@ SistemPenyewaanPerangkat.java
 
 Class tersebut menjadi titik awal program dan digunakan untuk menjalankan menu serta menerima input dari pengguna.
 
-### Insight
+#### Insight
 
 Pemisahan package dilakukan agar setiap bagian mempunyai tanggung jawab yang jelas.
 
@@ -142,7 +142,7 @@ Dengan struktur tersebut, apabila terdapat perubahan pada proses reservasi, peru
 
 ---
 
-# 🌳 5. HIERARKI CLASS
+## 🌳 5. HIERARKI CLASS
 
 Struktur inheritance pada program:
 
@@ -181,7 +181,7 @@ Mencatat Pengambilan
 Status Perangkat Diperbarui
 ~~~
 
-### Insight
+#### Insight
 
 Class dalam program saling berhubungan dan tidak berdiri sendiri.
 
@@ -191,13 +191,13 @@ Hubungan tersebut membuat alur program lebih sesuai dengan proses penyewaan sebe
 
 ---
 
-# 🧱 6. CLASS DAN TANGGUNG JAWABNYA
+## 🧱 6. CLASS DAN TANGGUNG JAWABNYA
 
-## 6.1 `Perangkat`
+### 6.1 `Perangkat`
 
 `Perangkat` merupakan superclass yang menyimpan informasi umum seluruh perangkat.
 
-### Atribut
+#### Atribut
 
 ~~~text
 idPerangkat
@@ -206,7 +206,7 @@ hargaSewa
 status
 ~~~
 
-### Tanggung Jawab
+#### Tanggung Jawab
 
 - Menyimpan identitas perangkat.
 - Menyimpan nama perangkat.
@@ -216,7 +216,7 @@ status
 - Menyediakan method `tampilkanInfo()`.
 - Menjadi superclass untuk `Kamera` dan `Drone`.
 
-### Insight
+#### Insight
 
 `Perangkat` menjadi superclass karena kamera dan drone memiliki karakteristik umum yang sama.
 
@@ -224,24 +224,24 @@ Dengan menempatkan data umum pada superclass, atribut tersebut tidak perlu ditul
 
 ---
 
-## 6.2 `Kamera`
+### 6.2 `Kamera`
 
 `Kamera` merupakan subclass dari `Perangkat`.
 
-### Atribut Tambahan
+#### Atribut Tambahan
 
 ~~~text
 resolusi
 jenisKamera
 ~~~
 
-### Tanggung Jawab
+#### Tanggung Jawab
 
 - Menyimpan karakteristik khusus kamera.
 - Menggunakan data umum dari `Perangkat`.
 - Melakukan overriding method `tampilkanInfo()`.
 
-### Insight
+#### Insight
 
 Kamera tetap memiliki ID, nama, harga sewa, dan status karena kamera merupakan perangkat yang disewakan.
 
@@ -249,24 +249,24 @@ Namun kamera juga mempunyai karakteristik khusus seperti resolusi dan jenis kame
 
 ---
 
-## 6.3 `Drone`
+### 6.3 `Drone`
 
 `Drone` merupakan subclass dari `Perangkat`.
 
-### Atribut Tambahan
+#### Atribut Tambahan
 
 ~~~text
 resolusiKamera
 durasiTerbang
 ~~~
 
-### Tanggung Jawab
+#### Tanggung Jawab
 
 - Menyimpan karakteristik khusus drone.
 - Menggunakan data umum dari `Perangkat`.
 - Melakukan overriding method `tampilkanInfo()`.
 
-### Insight
+#### Insight
 
 Drone memiliki data umum seperti ID, nama, harga, dan status, tetapi juga memiliki karakteristik khusus berupa resolusi kamera dan durasi terbang.
 
@@ -274,11 +274,11 @@ Karakteristik khusus tersebut ditempatkan pada subclass agar superclass tidak me
 
 ---
 
-## 6.4 `Penyewa`
+### 6.4 `Penyewa`
 
 `Penyewa` digunakan untuk menyimpan informasi orang yang melakukan penyewaan.
 
-### Atribut
+#### Atribut
 
 ~~~text
 idPenyewa
@@ -287,22 +287,22 @@ noTelepon
 alamat
 ~~~
 
-### Tanggung Jawab
+#### Tanggung Jawab
 
 - Menyimpan identitas penyewa.
 - Menyediakan informasi yang dibutuhkan dalam proses reservasi.
 
-### Insight
+#### Insight
 
 Data penyewa dibuat dalam class tersendiri agar informasi penyewa tidak bercampur dengan data perangkat atau reservasi.
 
 ---
 
-## 6.5 `Reservasi`
+### 6.5 `Reservasi`
 
 `Reservasi` digunakan untuk mencatat proses pemesanan perangkat.
 
-### Atribut
+#### Atribut
 
 ~~~text
 idReservasi
@@ -313,7 +313,7 @@ lamaSewa
 statusReservasi
 ~~~
 
-### Tanggung Jawab
+#### Tanggung Jawab
 
 - Menyimpan informasi reservasi.
 - Menghubungkan `Penyewa` dengan `Perangkat`.
@@ -322,7 +322,7 @@ statusReservasi
 - Menyimpan status reservasi.
 - Menghitung total harga.
 
-### Insight
+#### Insight
 
 `Reservasi` menjadi penghubung antara penyewa dan perangkat.
 
@@ -330,11 +330,11 @@ Karena `Reservasi` menyimpan object `Penyewa` dan `Perangkat`, data tidak perlu 
 
 ---
 
-## 6.6 `Pengambilan`
+### 6.6 `Pengambilan`
 
 `Pengambilan` digunakan untuk mencatat proses pengambilan perangkat.
 
-### Atribut
+#### Atribut
 
 ~~~text
 idPengambilan
@@ -344,7 +344,7 @@ jamPengambilan
 statusPengambilan
 ~~~
 
-### Tanggung Jawab
+#### Tanggung Jawab
 
 - Menyimpan data pengambilan.
 - Menghubungkan pengambilan dengan reservasi.
@@ -352,7 +352,7 @@ statusPengambilan
 - Menyimpan jam pengambilan.
 - Menyimpan status pengambilan.
 
-### Insight
+#### Insight
 
 `Pengambilan` menggunakan object `Reservasi` karena pengambilan merupakan kelanjutan dari proses reservasi.
 
@@ -360,11 +360,11 @@ Dengan begitu, informasi penyewa dan perangkat dapat diperoleh melalui object re
 
 ---
 
-# 🧬 7. IMPLEMENTASI INHERITANCE
+## 🧬 7. IMPLEMENTASI INHERITANCE
 
 Inheritance diterapkan melalui hubungan antara `Perangkat`, `Kamera`, dan `Drone`.
 
-### Implementasi pada `Kamera`
+#### Implementasi pada `Kamera`
 
 ~~~java
 public class Kamera extends Perangkat {
@@ -372,12 +372,12 @@ public class Kamera extends Perangkat {
 <table border="1" bordercolor="black">
   <tr>
     <td>
-      <img src="https://github.com" width="100%">
+      <img src="https://github.com/Sitinursinta04/PRAKTIKUM_PBO/blob/main/Matkul/second/Screenshot%202026-09-26%20185455.png" width="100%">
     </td>
   </tr>
 </table>
 
-### Implementasi pada `Drone`
+#### Implementasi pada `Drone`
 
 ~~~java
 public class Drone extends Perangkat {
@@ -385,7 +385,7 @@ public class Drone extends Perangkat {
 <table border="1" bordercolor="black">
   <tr>
     <td>
-      <img src="https://github.com" width="100%">
+      <img src="https://github.com/Sitinursinta04/PRAKTIKUM_PBO/blob/main/Matkul/second/Screenshot%202026-09-26%20185503.png" width="100%">
     </td>
   </tr>
 </table>
@@ -394,7 +394,7 @@ Keyword `extends` menunjukkan bahwa `Kamera` dan `Drone` merupakan subclass dari
 
 Kedua subclass dapat menggunakan method dan karakteristik yang diwariskan dari superclass.
 
-### Mengapa menggunakan inheritance?
+#### Mengapa menggunakan inheritance?
 
 Kamera dan drone sama-sama merupakan perangkat yang dapat disewa.
 
@@ -409,7 +409,7 @@ Status
 
 Jika data tersebut ditulis ulang pada masing-masing subclass, akan terjadi duplikasi kode.
 
-### Insight
+#### Insight
 
 Inheritance menunjukkan hubungan **is-a**:
 
@@ -426,7 +426,7 @@ Dengan demikian:
 
 ---
 
-# ⚙️ 8. IMPLEMENTASI `SUPER`
+## ⚙️ 8. IMPLEMENTASI `SUPER`
 
 Pada constructor `Kamera` dan `Drone` digunakan:
 
@@ -441,7 +441,7 @@ super(
 <table border="1" bordercolor="black">
   <tr>
     <td>
-      <img src="https://github.com" width="100%">
+      <img src="https://github.com/Sitinursinta04/PRAKTIKUM_PBO/blob/main/Matkul/second/Screenshot%202026-09-26%20185536.png" width="100%">
     </td>
   </tr>
 </table>
@@ -454,22 +454,22 @@ super.tampilkanInfo();
 <table border="1" bordercolor="black">
   <tr>
     <td>
-      <img src="https://github.com" width="100%">
+      <img src="https://github.com/Sitinursinta04/PRAKTIKUM_PBO/blob/main/Matkul/second/Screenshot%202026-09-26%20185556.png" width="100%">
     </td>
   </tr>
 </table>
 
-## Fungsi `super()`
+### Fungsi `super()`
 
 `super()` digunakan untuk memanggil constructor milik superclass `Perangkat`.
 
 Dengan cara tersebut, data umum seperti ID, nama, harga, dan status dapat diinisialisasi melalui constructor superclass.
 
-## Fungsi `super.tampilkanInfo()`
+### Fungsi `super.tampilkanInfo()`
 
 `super.tampilkanInfo()` digunakan untuk menjalankan method `tampilkanInfo()` milik superclass sebelum subclass menambahkan informasi khusus.
 
-### Insight
+#### Insight
 
 Penggunaan `super` membuat subclass dapat menggunakan kembali kode yang telah dibuat pada superclass.
 
@@ -477,11 +477,11 @@ Contohnya, `Kamera` tidak perlu menuliskan ulang proses untuk menampilkan ID, na
 
 ---
 
-# 🔄 9. IMPLEMENTASI POLYMORPHISM
+## 🔄 9. IMPLEMENTASI POLYMORPHISM
 
 Polymorphism diterapkan melalui **method overriding**.
 
-## 9.1 Overriding pada `Kamera`
+### 9.1 Overriding pada `Kamera`
 
 ~~~java
 @Override
@@ -503,12 +503,12 @@ public void tampilkanInfo() {
 <table border="1" bordercolor="black">
   <tr>
     <td>
-      <img src="https://github.com" width="100%">
+      <img src="https://github.com/Sitinursinta04/PRAKTIKUM_PBO/blob/main/Matkul/second/Screenshot%202026-09-26%20185645.png" width="100%">
     </td>
   </tr>
 </table>
 
-## 9.2 Overriding pada `Drone`
+### 9.2 Overriding pada `Drone`
 
 ~~~java
 @Override
@@ -531,12 +531,12 @@ public void tampilkanInfo() {
 <table border="1" bordercolor="black">
   <tr>
     <td>
-      <img src="https://github.com" width="100%">
+      <img src="https://github.com/Sitinursinta04/PRAKTIKUM_PBO/blob/main/Matkul/second/Screenshot%202026-09-26%20185654.png" width="100%">
     </td>
   </tr>
 </table>
 
-## 9.3 Pengujian Polymorphism
+### 9.3 Pengujian Polymorphism
 
 Polymorphism dapat ditunjukkan menggunakan referensi superclass:
 
@@ -550,7 +550,16 @@ Perangkat perangkat1 =
             "24 MP",
             "Mirrorless"
         );
+~~~
+<table border="1" bordercolor="black">
+  <tr>
+    <td>
+      <img src="https://github.com/Sitinursinta04/PRAKTIKUM_PBO/blob/main/Matkul/second/Screenshot%202026-09-26%20191404.png" width="100%">
+    </td>
+  </tr>
+</table>
 
+~~~java
 Perangkat perangkat2 =
         new Drone(
             "D001",
@@ -567,12 +576,12 @@ perangkat2.tampilkanInfo();
 <table border="1" bordercolor="black">
   <tr>
     <td>
-      <img src="https://github.com" width="100%">
+      <img src="https://github.com/Sitinursinta04/PRAKTIKUM_PBO/blob/main/Matkul/second/Screenshot%202026-09-26%20191416.png" width="100%">
     </td>
   </tr>
 </table>
 
-### Insight
+#### Insight
 
 Walaupun `perangkat1` dan `perangkat2` menggunakan tipe referensi `Perangkat`, object sebenarnya berbeda.
 
@@ -584,7 +593,7 @@ Hal tersebut menunjukkan bahwa satu nama method dapat menghasilkan perilaku yang
 
 ---
 
-# 🔐 10. IMPLEMENTASI ENCAPSULATION
+## 🔐 10. IMPLEMENTASI ENCAPSULATION
 
 Atribut pada class model dibuat menggunakan access modifier `private`.
 
@@ -596,7 +605,7 @@ private String status;
 <table border="1" bordercolor="black">
   <tr>
     <td>
-      <img src="https://github.com" width="100%">
+      <img src="https://github.com/Sitinursinta04/PRAKTIKUM_PBO/blob/main/Matkul/second/Screenshot%202026-09-26%20190236.png" width="100%">
     </td>
   </tr>
 </table>
@@ -611,7 +620,7 @@ public String getStatus() {
 <table border="1" bordercolor="black">
   <tr>
     <td>
-      <img src="https://github.com" width="100%">
+      <img src="https://github.com/Sitinursinta04/PRAKTIKUM_PBO/blob/main/Matkul/second/Screenshot%202026-09-26%20190325.png" width="100%">
     </td>
   </tr>
 </table>
@@ -626,46 +635,32 @@ public void setStatus(String status) {
 <table border="1" bordercolor="black">
   <tr>
     <td>
-      <img src="https://github.com" width="100%">
+      <img src="https://github.com/Sitinursinta04/PRAKTIKUM_PBO/blob/main/Matkul/second/Screenshot%202026-09-26%20190347.png" width="100%">
     </td>
   </tr>
 </table>
 
-### Fungsi
+#### Fungsi
 
 `private` membatasi akses langsung terhadap data internal object.
 
 Getter digunakan untuk membaca data, sedangkan setter digunakan untuk mengubah data.
 
-### Contoh
+#### Contoh
 
 Akses langsung seperti berikut tidak digunakan:
 
 ~~~java
 perangkat.status = "Disewa";
 ~~~
-<table border="1" bordercolor="black">
-  <tr>
-    <td>
-      <img src="https://github.com" width="100%">
-    </td>
-  </tr>
-</table>
 
 Perubahan dilakukan melalui setter:
 
 ~~~java
 perangkat.setStatus("Disewa");
 ~~~
-<table border="1" bordercolor="black">
-  <tr>
-    <td>
-      <img src="https://github.com" width="100%">
-    </td>
-  </tr>
-</table>
 
-### Insight
+#### Insight
 
 Encapsulation membuat data internal object lebih terkontrol.
 
@@ -673,7 +668,7 @@ Class dari luar tidak dapat mengubah atribut `private` secara langsung, tetapi h
 
 ---
 
-# 🏗️ 11. IMPLEMENTASI CONSTRUCTOR
+## 🏗️ 11. IMPLEMENTASI CONSTRUCTOR
 
 Constructor digunakan untuk memberikan nilai awal ketika object dibuat.
 
@@ -695,16 +690,16 @@ public Perangkat(
 <table border="1" bordercolor="black">
   <tr>
     <td>
-      <img src="https://github.com" width="100%">
+      <img src="https://github.com/Sitinursinta04/PRAKTIKUM_PBO/blob/main/Matkul/second/Screenshot%202026-09-26%20190624.png" width="100%">
     </td>
   </tr>
 </table>
 
-### Fungsi
+#### Fungsi
 
 Constructor memastikan object dapat dibuat dengan data awal yang dibutuhkan.
 
-### Insight
+#### Insight
 
 Dengan constructor, data dapat langsung diberikan ketika object dibuat.
 
@@ -712,7 +707,7 @@ Hal tersebut membuat object mempunyai kondisi awal yang jelas dan mengurangi keb
 
 ---
 
-# 🗃️ 12. PENGELOLAAN DATA DENGAN `ARRAYLIST`
+## 🗃️ 12. PENGELOLAAN DATA DENGAN `ARRAYLIST`
 
 Program menggunakan `ArrayList` untuk menyimpan kumpulan object.
 
@@ -724,7 +719,7 @@ private ArrayList<Reservasi> daftarReservasi;
 <table border="1" bordercolor="black">
   <tr>
     <td>
-      <img src="https://github.com" width="100%">
+      <img src="https://github.com/Sitinursinta04/PRAKTIKUM_PBO/blob/main/Matkul/second/Screenshot%202026-09-26%20190734.png" width="100%">
     </td>
   </tr>
 </table>
@@ -739,7 +734,7 @@ public KelolaReservasi() {
 <table border="1" bordercolor="black">
   <tr>
     <td>
-      <img src="https://github.com" width="100%">
+      <img src="https://github.com/Sitinursinta04/PRAKTIKUM_PBO/blob/main/Matkul/second/Screenshot%202026-09-26%20190758.png" width="100%">
     </td>
   </tr>
 </table>
@@ -752,7 +747,7 @@ daftarReservasi.add(reservasi);
 <table border="1" bordercolor="black">
   <tr>
     <td>
-      <img src="https://github.com" width="100%">
+      <img src="https://github.com/Sitinursinta04/PRAKTIKUM_PBO/blob/main/Matkul/second/Screenshot%202026-09-26%20190852.png" width="100%">
     </td>
   </tr>
 </table>
@@ -769,16 +764,16 @@ for (Reservasi reservasi
 <table border="1" bordercolor="black">
   <tr>
     <td>
-      <img src="https://github.com" width="100%">
+      <img src="https://github.com/Sitinursinta04/PRAKTIKUM_PBO/blob/main/Matkul/second/Screenshot%202026-09-26%20190941.png" width="100%">
     </td>
   </tr>
 </table>
 
-### Fungsi
+#### Fungsi
 
 `ArrayList` digunakan karena jumlah perangkat, reservasi, dan pengambilan dapat berubah selama program berjalan.
 
-### Insight
+#### Insight
 
 `ArrayList` lebih fleksibel dibandingkan array biasa karena jumlah data dapat bertambah atau berkurang.
 
@@ -794,11 +789,11 @@ Masing-masing digunakan untuk mengelola jenis object yang berbeda.
 
 ---
 
-# 🆔 13. GENERATE ID OTOMATIS
+## 🆔 13. GENERATE ID OTOMATIS
 
 Program membuat ID reservasi dan pengambilan secara otomatis.
 
-## 13.1 ID Reservasi
+### 13.1 ID Reservasi
 
 Format:
 
@@ -817,7 +812,7 @@ String id =
 <table border="1" bordercolor="black">
   <tr>
     <td>
-      <img src="https://github.com" width="100%">
+      <img src="https://github.com/Sitinursinta04/PRAKTIKUM_PBO/blob/main/Matkul/second/Screenshot%202026-09-26%20191026.png" width="100%">
     </td>
   </tr>
 </table>
@@ -834,12 +829,12 @@ nomor++;
 <table border="1" bordercolor="black">
   <tr>
     <td>
-      <img src="https://github.com" width="100%">
+      <img src="https://github.com/Sitinursinta04/PRAKTIKUM_PBO/blob/main/Matkul/second/Screenshot%202026-09-26%20191110.png" width="100%">
     </td>
   </tr>
 </table>
 
-## 13.2 ID Pengambilan
+### 13.2 ID Pengambilan
 
 Format:
 
@@ -849,7 +844,7 @@ PG002
 PG003
 ~~~
 
-### Insight
+#### Insight
 
 Pengguna tidak perlu menentukan ID secara manual.
 
@@ -861,7 +856,7 @@ Hal tersebut membantu menjaga konsistensi dan mengurangi kemungkinan ID yang sam
 
 ---
 
-# 💰 14. PERHITUNGAN TOTAL HARGA
+## 💰 14. PERHITUNGAN TOTAL HARGA
 
 Total harga dihitung dengan rumus:
 
@@ -877,15 +872,8 @@ public double hitungTotalHarga() {
             * lamaSewa;
 }
 ~~~
-<table border="1" bordercolor="black">
-  <tr>
-    <td>
-      <img src="https://github.com" width="100%">
-    </td>
-  </tr>
-</table>
 
-### Contoh
+#### Contoh
 
 ~~~text
 Harga Sewa = Rp250.000
@@ -895,15 +883,8 @@ Total Harga
 = Rp250.000 × 2
 = Rp500.000
 ~~~
-<table border="1" bordercolor="black">
-  <tr>
-    <td>
-      <img src="https://github.com" width="100%">
-    </td>
-  </tr>
-</table>
 
-### Insight
+#### Insight
 
 Perhitungan ditempatkan pada class `Reservasi` karena total harga berhubungan langsung dengan perangkat yang dipilih dan lama penyewaan.
 
@@ -911,7 +892,7 @@ Dengan demikian, `Main` tidak perlu mengetahui detail perhitungan tersebut.
 
 ---
 
-# 🔄 15. PERUBAHAN STATUS PERANGKAT
+## 🔄 15. PERUBAHAN STATUS PERANGKAT
 
 Status perangkat berubah mengikuti proses penyewaan:
 
@@ -931,7 +912,7 @@ perangkat.setStatus("Direservasi");
 <table border="1" bordercolor="black">
   <tr>
     <td>
-      <img src="https://github.com" width="100%">
+      <img src="https://github.com/Sitinursinta04/PRAKTIKUM_PBO/blob/main/Matkul/second/Screenshot%202026-09-26%20191808.png" width="100%">
     </td>
   </tr>
 </table>
@@ -944,12 +925,12 @@ perangkat.setStatus("Disewa");
 <table border="1" bordercolor="black">
   <tr>
     <td>
-      <img src="https://github.com" width="100%">
+      <img src="https://github.com/Sitinursinta04/PRAKTIKUM_PBO/blob/main/Matkul/second/Screenshot%202026-09-26%20191832.png" width="100%">
     </td>
   </tr>
 </table>
 
-### Insight
+#### Insight
 
 Status perangkat digunakan untuk menunjukkan kondisi perangkat sekaligus menjadi bagian dari logika bisnis.
 
@@ -973,7 +954,7 @@ Dengan demikian, status bukan hanya informasi yang ditampilkan, tetapi juga digu
 
 ---
 
-# 🔐 16. VALIDASI PROSES RESERVASI
+## 🔐 16. VALIDASI PROSES RESERVASI
 
 Sebelum membuat reservasi, program memeriksa status perangkat.
 
@@ -997,7 +978,16 @@ if (perangkat.getStatus()
     daftarReservasi.add(reservasi);
 
     perangkat.setStatus("Direservasi");
+~~~
+<table border="1" bordercolor="black">
+  <tr>
+    <td>
+      <img src="https://github.com/Sitinursinta04/PRAKTIKUM_PBO/blob/main/Matkul/second/Screenshot%202026-09-26%20192437.png" width="100%">
+    </td>
+  </tr>
+</table>
 
+~~~java
 } else {
 
     System.out.println(
@@ -1008,16 +998,16 @@ if (perangkat.getStatus()
 <table border="1" bordercolor="black">
   <tr>
     <td>
-      <img src="https://github.com" width="100%">
+      <img src="https://github.com/Sitinursinta04/PRAKTIKUM_PBO/blob/main/Matkul/second/Screenshot%202026-09-26%20192454.png" width="100%">
     </td>
   </tr>
 </table>
 
-### Fungsi
+#### Fungsi
 
 Validasi memastikan hanya perangkat dengan status `Tersedia` yang dapat dibuatkan reservasi.
 
-### Insight
+#### Insight
 
 Program tidak langsung membuat reservasi.
 
@@ -1025,11 +1015,11 @@ Status perangkat diperiksa terlebih dahulu. Jika perangkat tidak tersedia, prose
 
 ---
 
-# 🔄 17. IMPLEMENTASI CONTROL FLOW
+## 🔄 17. IMPLEMENTASI CONTROL FLOW
 
 Program menggunakan beberapa bentuk control flow.
 
-## 17.1 `switch-case`
+### 17.1 `switch-case`
 
 ~~~java
 switch (pilihan) {
@@ -1051,21 +1041,14 @@ switch (pilihan) {
         break;
 }
 ~~~
-<table border="1" bordercolor="black">
-  <tr>
-    <td>
-      <img src="https://github.com" width="100%">
-    </td>
-  </tr>
-</table>
 
-### Insight
+#### Insight
 
 `switch-case` digunakan untuk mengatur pilihan menu utama karena program mempunyai banyak pilihan dengan nomor yang berbeda.
 
 ---
 
-## 17.2 `if-else`
+### 17.2 `if-else`
 
 ~~~java
 if (perangkat.getStatus()
@@ -1080,15 +1063,8 @@ if (perangkat.getStatus()
     );
 }
 ~~~
-<table border="1" bordercolor="black">
-  <tr>
-    <td>
-      <img src="https://github.com" width="100%">
-    </td>
-  </tr>
-</table>
 
-### Insight
+#### Insight
 
 `if-else` digunakan ketika program harus mengambil keputusan berdasarkan kondisi tertentu.
 
@@ -1096,7 +1072,7 @@ Dalam program ini, kondisi tersebut adalah status perangkat.
 
 ---
 
-## 17.3 `for`
+### 17.3 `for`
 
 ~~~java
 for (Reservasi reservasi
@@ -1108,18 +1084,18 @@ for (Reservasi reservasi
 <table border="1" bordercolor="black">
   <tr>
     <td>
-      <img src="https://github.com" width="100%">
+      <img src="https://github.com/Sitinursinta04/PRAKTIKUM_PBO/blob/main/Matkul/second/Screenshot%202026-09-26%20192927.png" width="100%">
     </td>
   </tr>
 </table>
 
-### Insight
+#### Insight
 
 `for` digunakan untuk menelusuri setiap object yang terdapat di dalam `ArrayList`.
 
 ---
 
-## 17.4 `while`
+### 17.4 `while`
 
 ~~~java
 while (true) {
@@ -1137,12 +1113,12 @@ while (true) {
 <table border="1" bordercolor="black">
   <tr>
     <td>
-      <img src="https://github.com" width="100%">
+      <img src="https://github.com/Sitinursinta04/PRAKTIKUM_PBO/blob/main/Matkul/second/Screenshot%202026-09-26%20192958.png" width="100%">
     </td>
   </tr>
 </table>
 
-### Insight
+#### Insight
 
 `while` digunakan dalam proses generate ID karena jumlah percobaan tidak diketahui sebelumnya.
 
@@ -1150,7 +1126,7 @@ Perulangan berhenti ketika ditemukan ID yang belum digunakan.
 
 ---
 
-## 17.5 `do-while`
+### 17.5 `do-while`
 
 Menu utama menggunakan:
 
@@ -1163,15 +1139,8 @@ do {
 
 } while (pilihan != 14);
 ~~~
-<table border="1" bordercolor="black">
-  <tr>
-    <td>
-      <img src="https://github.com" width="100%">
-    </td>
-  </tr>
-</table>
 
-### Insight
+#### Insight
 
 `do-while` memastikan menu ditampilkan minimal satu kali.
 
@@ -1179,7 +1148,7 @@ Program akan terus berjalan sampai pengguna memilih menu `14`.
 
 ---
 
-# 🧭 18. ALUR PROSES RESERVASI
+## 🧭 18. ALUR PROSES RESERVASI
 
 ~~~text
 Pengguna
@@ -1209,7 +1178,7 @@ Apakah Tersedia?
      Status Perangkat = Direservasi
 ~~~
 
-### Insight
+#### Insight
 
 Validasi dilakukan sebelum data reservasi disimpan.
 
@@ -1219,7 +1188,7 @@ Jika perangkat tersedia, sistem membuat object reservasi, menghitung harga, meny
 
 ---
 
-# 📦 19. ALUR PROSES PENGAMBILAN
+## 📦 19. ALUR PROSES PENGAMBILAN
 
 ~~~text
 Pilih Reservasi
@@ -1243,7 +1212,7 @@ Reservasi Dikonfirmasi?
       Status Perangkat = Disewa
 ~~~
 
-### Insight
+#### Insight
 
 Pengambilan dilakukan berdasarkan reservasi yang sudah dibuat.
 
@@ -1251,7 +1220,7 @@ Dengan menggunakan object `Reservasi`, program dapat memperoleh informasi penyew
 
 ---
 
-# 🔗 20. HUBUNGAN ANTAR-CLASS
+## 🔗 20. HUBUNGAN ANTAR-CLASS
 
 Hubungan object dalam program:
 
@@ -1279,7 +1248,7 @@ private Perangkat perangkat;
 <table border="1" bordercolor="black">
   <tr>
     <td>
-      <img src="https://github.com" width="100%">
+      <img src="https://github.com/Sitinursinta04/PRAKTIKUM_PBO/blob/main/Matkul/second/Screenshot%202026-09-26%20193144.png" width="100%">
     </td>
   </tr>
 </table>
@@ -1292,40 +1261,26 @@ private Reservasi reservasi;
 <table border="1" bordercolor="black">
   <tr>
     <td>
-      <img src="https://github.com" width="100%">
+      <img src="https://github.com/Sitinursinta04/PRAKTIKUM_PBO/blob/main/Matkul/second/Screenshot%202026-09-26%20193219.png" width="100%">
     </td>
   </tr>
 </table>
 
-### Contoh akses object
+#### Contoh akses object
 
 Mengambil nama penyewa:
 
 ~~~java
 reservasi.getPenyewa().getNamaPenyewa();
 ~~~
-<table border="1" bordercolor="black">
-  <tr>
-    <td>
-      <img src="https://github.com" width="100%">
-    </td>
-  </tr>
-</table>
 
 Mengambil nama perangkat:
 
 ~~~java
 reservasi.getPerangkat().getNamaPerangkat();
 ~~~
-<table border="1" bordercolor="black">
-  <tr>
-    <td>
-      <img src="https://github.com" width="100%">
-    </td>
-  </tr>
-</table>
 
-### Insight
+#### Insight
 
 Hubungan antarobject membuat data dapat digunakan kembali.
 
@@ -1333,7 +1288,7 @@ Saat pengambilan dilakukan, program tidak perlu meminta kembali nama penyewa dan
 
 ---
 
-# 🧠 21. PEMISAHAN `MODEL`, `LOGIC`, DAN `MAIN`
+## 🧠 21. PEMISAHAN `MODEL`, `LOGIC`, DAN `MAIN`
 
 Struktur program:
 
@@ -1351,7 +1306,7 @@ Main
 Interaksi pengguna
 ~~~
 
-## Model
+### Model
 
 Berisi:
 
@@ -1362,7 +1317,7 @@ Berisi:
 - `Reservasi`
 - `Pengambilan`
 
-## Logic
+### Logic
 
 Berisi:
 
@@ -1370,7 +1325,7 @@ Berisi:
 - `KelolaReservasi`
 - `KelolaPengambilan`
 
-## Main
+### Main
 
 Berisi:
 
@@ -1379,7 +1334,7 @@ Berisi:
 - pemanggilan fitur;
 - pengendalian alur program.
 
-### Insight
+#### Insight
 
 Pemisahan tersebut membuat setiap bagian mempunyai tanggung jawab yang jelas.
 
@@ -1387,7 +1342,7 @@ Jika proses reservasi ingin diperbaiki, perubahan dapat difokuskan pada `KelolaR
 
 ---
 
-# ⚙️ 22. FITUR UTAMA PROGRAM
+## ⚙️ 22. FITUR UTAMA PROGRAM
 
 | Menu | Fitur | Fungsi |
 |---:|---|---|
@@ -1408,9 +1363,9 @@ Jika proses reservasi ingin diperbaiki, perubahan dapat difokuskan pada `KelolaR
 
 ---
 
-# 🧪 23. SKENARIO PENGUJIAN PROGRAM
+## 🧪 23. SKENARIO PENGUJIAN PROGRAM
 
-## 23.1 Pengujian Pengelolaan Perangkat
+### 23.1 Pengujian Pengelolaan Perangkat
 
 Pengujian dilakukan dengan:
 
@@ -1421,13 +1376,13 @@ Pengujian dilakukan dengan:
 5. Mengubah status perangkat.
 6. Menghapus perangkat.
 
-### Hasil yang Diharapkan
+#### Hasil yang Diharapkan
 
 Data perangkat dapat ditampilkan, ditambahkan, dicari, diubah, dan dihapus melalui menu yang tersedia.
 
 ---
 
-## 23.2 Pengujian Reservasi
+### 23.2 Pengujian Reservasi
 
 Pengujian dilakukan dengan:
 
@@ -1438,7 +1393,7 @@ Pengujian dilakukan dengan:
 5. Memasukkan lama sewa.
 6. Membuat reservasi.
 
-### Hasil yang Diharapkan
+#### Hasil yang Diharapkan
 
 - ID reservasi dibuat otomatis.
 - Data reservasi tersimpan.
@@ -1447,11 +1402,11 @@ Pengujian dilakukan dengan:
 
 ---
 
-## 23.3 Pengujian Perangkat Tidak Tersedia
+### 23.3 Pengujian Perangkat Tidak Tersedia
 
 Pengguna mencoba melakukan reservasi pada perangkat yang statusnya bukan `Tersedia`.
 
-### Hasil yang Diharapkan
+#### Hasil yang Diharapkan
 
 Program menolak proses reservasi dan menampilkan:
 
@@ -1463,11 +1418,11 @@ Hal ini menunjukkan bahwa validasi status perangkat berjalan.
 
 ---
 
-## 23.4 Pengujian Pengambilan
+### 23.4 Pengujian Pengambilan
 
 Pengujian dilakukan menggunakan reservasi yang telah dibuat.
 
-### Hasil yang Diharapkan
+#### Hasil yang Diharapkan
 
 - ID pengambilan dibuat otomatis.
 - Data pengambilan tersimpan.
@@ -1476,21 +1431,21 @@ Pengujian dilakukan menggunakan reservasi yang telah dibuat.
 
 ---
 
-## 23.5 Pengujian Polymorphism
+### 23.5 Pengujian Polymorphism
 
 Pengujian dilakukan menggunakan object `Kamera` dan `Drone` dengan referensi bertipe `Perangkat`.
 
-### Hasil yang Diharapkan
+#### Hasil yang Diharapkan
 
 Object `Kamera` menjalankan method `tampilkanInfo()` milik `Kamera`, sedangkan object `Drone` menjalankan method `tampilkanInfo()` milik `Drone`.
 
 ---
 
-# 🖥️ 24. DOKUMENTASI OUTPUT PROGRAM
+## 🖥️ 24. DOKUMENTASI OUTPUT PROGRAM
 
 Dokumentasi hasil output program:
 
-## 24.1 Menu Utama
+### 24.1 Menu Utama
 
 <table border="1" bordercolor="black">
   <tr>
@@ -1504,7 +1459,7 @@ Menampilkan seluruh pilihan fitur yang tersedia dalam program.
 
 ---
 
-## 24.2 Data Perangkat
+### 24.2 Data Perangkat
 
 <table border="1" bordercolor="black">
   <tr>
@@ -1518,7 +1473,7 @@ Menampilkan seluruh perangkat yang tersimpan dalam sistem.
 
 ---
 
-## 24.3 Tambah Kamera
+### 24.3 Tambah Kamera
 
 <table border="1" bordercolor="black">
   <tr>
@@ -1532,7 +1487,7 @@ Menampilkan proses penambahan data kamera.
 
 ---
 
-## 24.4 Tambah Drone
+### 24.4 Tambah Drone
 
 <table border="1" bordercolor="black">
   <tr>
@@ -1546,7 +1501,7 @@ Menampilkan proses penambahan data drone.
 
 ---
 
-## 24.5 Cari Perangkat
+### 24.5 Cari Perangkat
 
 <table border="1" bordercolor="black">
   <tr>
@@ -1560,7 +1515,7 @@ Menampilkan proses pencarian perangkat berdasarkan ID.
 
 ---
 
-## 24.6 Ubah Status Perangkat
+### 24.6 Ubah Status Perangkat
 
 <table border="1" bordercolor="black">
   <tr>
@@ -1581,7 +1536,7 @@ Menampilkan proses perubahan status perangkat.
 
 ---
 
-## 24.7 Hapus Perangkat
+### 24.7 Hapus Perangkat
 
 <table border="1" bordercolor="black">
   <tr>
@@ -1602,7 +1557,7 @@ Menampilkan proses penghapusan perangkat.
 
 ---
 
-## 24.8 Dashboard Sistem
+### 24.8 Dashboard Sistem
 
 <table border="1" bordercolor="black">
   <tr>
@@ -1616,7 +1571,7 @@ Menampilkan ringkasan data yang terdapat dalam sistem.
 
 ---
 
-## 24.9 Rekomendasi Perangkat
+### 24.9 Rekomendasi Perangkat
 
 <table border="1" bordercolor="black">
   <tr>
@@ -1630,7 +1585,7 @@ Menampilkan hasil rekomendasi perangkat berdasarkan kebutuhan pengguna.
 
 ---
 
-## 24.10 Pembuatan Reservasi
+### 24.10 Pembuatan Reservasi
 
 <table border="1" bordercolor="black">
   <tr>
@@ -1644,7 +1599,7 @@ Menampilkan proses pembuatan reservasi, generate ID, dan perhitungan total harga
 
 ---
 
-## 24.11 Data Reservasi
+### 24.11 Data Reservasi
 
 <table border="1" bordercolor="black">
   <tr>
@@ -1658,7 +1613,7 @@ Menampilkan seluruh reservasi yang telah tersimpan.
 
 ---
 
-## 24.12 Pencatatan Pengambilan
+### 24.12 Pencatatan Pengambilan
 
 <table border="1" bordercolor="black">
   <tr>
@@ -1672,7 +1627,7 @@ Menampilkan proses pencatatan pengambilan perangkat.
 
 ---
 
-## 24.13 Data Pengambilan
+### 24.13 Data Pengambilan
 
 <table border="1" bordercolor="black">
   <tr>
@@ -1686,7 +1641,7 @@ Menampilkan seluruh data pengambilan yang telah tersimpan.
 
 ---
 
-## 24.14 Demo Polymorphism
+### 24.14 Demo Polymorphism
 
 <table border="1" bordercolor="black">
   <tr>
@@ -1700,7 +1655,7 @@ Menampilkan hasil overriding method `tampilkanInfo()` pada `Kamera` dan `Drone`.
 
 ---
 
-## 24.15 Keluar Program
+### 24.15 Keluar Program
 
 <table border="1" bordercolor="black">
   <tr>
@@ -1714,7 +1669,7 @@ Menampilkan output ketika pengguna memilih menu keluar.
 
 ---
 
-# 📝 25. KETERBATASAN PROGRAM
+## 📝 25. KETERBATASAN PROGRAM
 
 Program saat ini masih menggunakan `ArrayList`, sehingga data hanya tersimpan selama aplikasi sedang berjalan.
 
@@ -1729,7 +1684,7 @@ Program juga belum menggunakan:
 - perhitungan denda;
 - GUI.
 
-### Insight
+#### Insight
 
 Keterbatasan tersebut merupakan batasan dari versi aplikasi console yang dibuat untuk kebutuhan tugas PBO.
 
@@ -1737,7 +1692,7 @@ Walaupun belum menggunakan database atau GUI, program sudah menerapkan konsep da
 
 ---
 
-# 🚀 26. PENGEMBANGAN SELANJUTNYA
+## 🚀 26. PENGEMBANGAN SELANJUTNYA
 
 Program dapat dikembangkan menjadi sistem yang lebih lengkap.
 
@@ -1772,7 +1727,7 @@ Pengembangan yang dapat dilakukan:
 
 ---
 
-# 📊 27. RINGKASAN PENERAPAN KONSEP PBO
+## 📊 27. RINGKASAN PENERAPAN KONSEP PBO
 
 | Konsep | Implementasi |
 |---|---|
@@ -1797,9 +1752,9 @@ Pengembangan yang dapat dilakukan:
 
 ---
 
-# 🔍 28. ANALISIS PERANCANGAN
+## 🔍 28. ANALISIS PERANCANGAN
 
-## 28.1 Mengapa `Kamera` dan `Drone` menjadi subclass?
+### 28.1 Mengapa `Kamera` dan `Drone` menjadi subclass?
 
 Kamera dan drone sama-sama merupakan perangkat yang dapat disewa.
 
@@ -1830,13 +1785,13 @@ Drone
 
 Karena terdapat data umum dan data khusus, `Perangkat` digunakan sebagai superclass.
 
-### Insight
+#### Insight
 
 Inheritance mengurangi duplikasi kode sekaligus membuat struktur class mencerminkan hubungan objek pada dunia nyata.
 
 ---
 
-## 28.2 Mengapa `Reservasi` menyimpan object `Penyewa` dan `Perangkat`?
+### 28.2 Mengapa `Reservasi` menyimpan object `Penyewa` dan `Perangkat`?
 
 Pada `Reservasi` terdapat:
 
@@ -1859,13 +1814,13 @@ dan:
 perangkat.getNamaPerangkat();
 ~~~
 
-### Insight
+#### Insight
 
 Cara tersebut lebih terstruktur dibandingkan menyimpan semua informasi sebagai `String` terpisah.
 
 ---
 
-## 28.3 Mengapa `Pengambilan` menggunakan `Reservasi`?
+### 28.3 Mengapa `Pengambilan` menggunakan `Reservasi`?
 
 Pada `Pengambilan` terdapat:
 
@@ -1885,13 +1840,13 @@ Reservasi sudah menyimpan informasi mengenai:
 
 Karena itu, `Pengambilan` tidak perlu meminta kembali seluruh informasi tersebut.
 
-### Insight
+#### Insight
 
 Hubungan ini mengurangi pengulangan input dan membuat alur program lebih realistis.
 
 ---
 
-## 28.4 Mengapa status perangkat perlu dikelola?
+### 28.4 Mengapa status perangkat perlu dikelola?
 
 Status perangkat berubah berdasarkan proses:
 
@@ -1905,13 +1860,13 @@ Disewa
 
 Status digunakan untuk menentukan apakah perangkat dapat digunakan pada proses berikutnya.
 
-### Insight
+#### Insight
 
 Status bukan hanya informasi tampilan, tetapi juga digunakan sebagai bagian dari aturan bisnis program.
 
 ---
 
-## 28.5 Mengapa perhitungan harga berada pada `Reservasi`?
+### 28.5 Mengapa perhitungan harga berada pada `Reservasi`?
 
 Implementasi:
 
@@ -1932,12 +1887,12 @@ Lama Penyewaan
 
 Kedua informasi tersebut tersedia pada `Reservasi`.
 
-### Insight
+#### Insight
 Dengan menempatkan perhitungan di `Reservasi`, tanggung jawab class menjadi lebih jelas dan `Main` tidak perlu menangani detail perhitungan.
 
 ---
 
-## 28.6 Mengapa `Logic` dipisahkan dari `Model`?
+### 28.6 Mengapa `Logic` dipisahkan dari `Model`?
 
 ~~~text
 Model
@@ -1970,12 +1925,12 @@ Logic
 - menampilkan reservasi;
 - membuat ID reservasi.
 
-### Insight
+#### Insight
 Pemisahan tanggung jawab membuat program lebih terstruktur dan memudahkan pengembangan.
 
 ---
 
-# 🧾 29. KESIMPULAN
+## 🧾 29. KESIMPULAN
 
 **Sistem Penyewaan Perangkat** merupakan aplikasi Java Console yang dibuat untuk mensimulasikan proses penyewaan kamera dan drone dengan menerapkan konsep Pemrograman Berorientasi Objek.
 
@@ -2003,7 +1958,7 @@ Dengan struktur tersebut, setiap class memiliki tanggung jawab yang berbeda teta
 
 ---
 
-# 🎓 30. PENUTUP
+## 30. PENUTUP
 
 Melalui proyek ini, konsep Pemrograman Berorientasi Objek diterapkan tidak hanya sebagai syntax Java, tetapi juga sebagai dasar dalam merancang struktur program.
 

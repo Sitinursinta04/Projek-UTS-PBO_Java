@@ -1970,6 +1970,6 @@ Program ini masih dapat dikembangkan menggunakan database, sistem login, proses 
 
 ---
 
-# ✨ KONSEP UTAMA
+## ✨ KONSEP UTAMA
 
 `Class` · `Object` · `Inheritance` · `Superclass` · `Subclass` · `extends` · `super` · `Encapsulation` · `Polymorphism` · `Constructor` · `ArrayList` · `Percabangan` · `Perulangan`

@@ -2010,8 +2010,6 @@ Pemilihan `Perangkat` sebagai superclass memungkinkan `Kamera` dan `Drone` berba
 
 Pemisahan `Model`, `Logic`, dan `Main` membantu membagi tanggung jawab program sehingga kode menjadi lebih terstruktur dan lebih mudah dikembangkan.
 
-Program ini masih dapat dikembangkan menggunakan database, sistem login, proses pengembalian, pembayaran, laporan, dan antarmuka yang lebih interaktif.
-
 ---
 
 ## ✨ KONSEP UTAMA

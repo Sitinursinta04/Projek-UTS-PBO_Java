@@ -1491,7 +1491,7 @@ Object `Kamera` menjalankan method `tampilkanInfo()` milik `Kamera`, sedangkan o
 
 ## 🖥️ 24. DOKUMENTASI OUTPUT PROGRAM
 
-Dokumentasi hasil output program:
+Dokumentasi hasil output program digunakan untuk menunjukkan proses penggunaan setiap fitur utama pada Sistem Penyewaan Perangkat. Setiap dokumentasi menjelaskan langkah yang dilakukan pengguna serta hasil yang ditampilkan oleh sistem.
 
 ### 24.1 Menu Utama
 
@@ -1503,7 +1503,7 @@ Dokumentasi hasil output program:
   </tr>
 </table>
 
-Menampilkan seluruh pilihan fitur yang tersedia dalam program.
+Pada saat program pertama kali dijalankan, sistem menampilkan menu utama yang berisi seluruh pilihan fitur. Pengguna dapat memilih fitur dengan memasukkan nomor menu yang tersedia. Pilihan tersebut kemudian diproses menggunakan `switch-case` untuk menjalankan fungsi sesuai dengan menu yang dipilih.
 
 ---
 
@@ -1517,7 +1517,7 @@ Menampilkan seluruh pilihan fitur yang tersedia dalam program.
   </tr>
 </table>
 
-Menampilkan seluruh perangkat yang tersimpan dalam sistem.
+Pada tahap ini, pengguna memilih menu untuk melihat data perangkat. Sistem mengambil seluruh data perangkat yang tersimpan dalam `ArrayList`, kemudian menampilkannya menggunakan perulangan. Informasi yang ditampilkan meliputi ID perangkat, nama perangkat, harga sewa, dan status perangkat.
 
 ---
 
@@ -1531,7 +1531,7 @@ Menampilkan seluruh perangkat yang tersimpan dalam sistem.
   </tr>
 </table>
 
-Menampilkan proses penambahan data kamera.
+Pada tahap ini, pengguna memilih menu untuk menambahkan perangkat kamera. Pengguna memasukkan data kamera yang diperlukan, seperti ID perangkat, nama perangkat, harga sewa, status, resolusi, dan jenis kamera. Setelah seluruh data dimasukkan, sistem membuat object `Kamera` dan menyimpannya ke dalam daftar perangkat.
 
 ---
 
@@ -1545,7 +1545,7 @@ Menampilkan proses penambahan data kamera.
   </tr>
 </table>
 
-Menampilkan proses penambahan data drone.
+Pada tahap ini, pengguna menambahkan perangkat drone. Pengguna memasukkan data seperti ID perangkat, nama perangkat, harga sewa, status, resolusi kamera, dan durasi terbang. Sistem kemudian membuat object `Drone` dan menyimpannya ke dalam daftar perangkat.
 
 ---
 
@@ -1559,7 +1559,7 @@ Menampilkan proses penambahan data drone.
   </tr>
 </table>
 
-Menampilkan proses pencarian perangkat berdasarkan ID.
+Pada tahap ini, pengguna mencari perangkat berdasarkan ID. Pengguna memasukkan ID perangkat yang ingin dicari, kemudian sistem melakukan pencarian pada daftar perangkat. Jika perangkat ditemukan, sistem menampilkan informasi perangkat tersebut. Jika tidak ditemukan, sistem memberikan informasi bahwa data perangkat tidak tersedia.
 
 ---
 
@@ -1581,7 +1581,7 @@ Menampilkan proses pencarian perangkat berdasarkan ID.
   </tr>
 </table>
 
-Menampilkan proses perubahan status perangkat.
+Pada tahap ini, pengguna mengubah status perangkat berdasarkan ID perangkat yang dipilih. Sistem terlebih dahulu mencari perangkat, kemudian pengguna memasukkan status baru. Setelah perubahan dilakukan, sistem memperbarui status perangkat menggunakan method setter dan menampilkan hasil perubahan tersebut.
 
 ---
 
@@ -1603,7 +1603,7 @@ Menampilkan proses perubahan status perangkat.
   </tr>
 </table>
 
-Menampilkan proses penghapusan perangkat.
+Pada tahap ini, pengguna menghapus data perangkat berdasarkan ID. Sistem mencari perangkat terlebih dahulu. Jika perangkat ditemukan, object perangkat dihapus dari `ArrayList`. Sistem kemudian menampilkan informasi bahwa proses penghapusan berhasil dilakukan.
 
 ---
 
@@ -1617,7 +1617,7 @@ Menampilkan proses penghapusan perangkat.
   </tr>
 </table>
 
-Menampilkan ringkasan data yang terdapat dalam sistem.
+Pada tahap ini, sistem menampilkan ringkasan data yang terdapat dalam sistem. Dashboard digunakan untuk memberikan gambaran umum mengenai data perangkat dan data penyewaan yang telah dikelola oleh program.
 
 ---
 
@@ -1631,7 +1631,7 @@ Menampilkan ringkasan data yang terdapat dalam sistem.
   </tr>
 </table>
 
-Menampilkan hasil rekomendasi perangkat berdasarkan kebutuhan pengguna.
+Pada tahap ini, pengguna memilih fitur rekomendasi perangkat. Sistem menampilkan rekomendasi berdasarkan kebutuhan atau pilihan yang dimasukkan oleh pengguna. Hasil rekomendasi membantu pengguna menentukan perangkat yang sesuai dari data perangkat yang tersedia.
 
 ---
 
@@ -1645,7 +1645,15 @@ Menampilkan hasil rekomendasi perangkat berdasarkan kebutuhan pengguna.
   </tr>
 </table>
 
-Menampilkan proses pembuatan reservasi, generate ID, dan perhitungan total harga.
+Pada tahap ini, pengguna membuat reservasi perangkat. Proses dilakukan dengan memilih penyewa, memilih perangkat yang tersedia, memasukkan tanggal reservasi, dan menentukan lama sewa.
+
+Setelah data dimasukkan, sistem melakukan pemeriksaan terhadap status perangkat. Jika perangkat berstatus **Tersedia**, sistem membuat object `Reservasi`, menghasilkan ID reservasi secara otomatis, mengubah status perangkat menjadi **Direservasi**, dan menghitung total harga berdasarkan lama sewa.
+
+Rumus perhitungan total harga:
+
+~~~text
+Total Harga = Harga Sewa × Lama Sewa
+~~~
 
 ---
 
@@ -1659,7 +1667,9 @@ Menampilkan proses pembuatan reservasi, generate ID, dan perhitungan total harga
   </tr>
 </table>
 
-Menampilkan seluruh reservasi yang telah tersimpan.
+Setelah reservasi berhasil dibuat, pengguna dapat melihat data reservasi yang telah tersimpan. Sistem mengambil data dari `ArrayList` dan menampilkan informasi setiap reservasi.
+
+Informasi yang ditampilkan meliputi ID reservasi, nama penyewa, perangkat yang dipesan, tanggal reservasi, lama sewa, total harga, dan status reservasi.
 
 ---
 
@@ -1673,7 +1683,32 @@ Menampilkan seluruh reservasi yang telah tersimpan.
   </tr>
 </table>
 
-Menampilkan proses pencatatan pengambilan perangkat.
+Pada tahap ini, pengguna melakukan pencatatan pengambilan perangkat berdasarkan reservasi yang telah dibuat.
+
+Proses dilakukan dengan langkah berikut:
+
+1. Pengguna memilih menu **Catat Pengambilan**.
+2. Pengguna memasukkan ID reservasi.
+3. Sistem mencari data reservasi berdasarkan ID tersebut.
+4. Sistem menampilkan informasi reservasi yang ditemukan.
+5. Pengguna memasukkan tanggal pengambilan.
+6. Pengguna memasukkan jam pengambilan.
+7. Pengguna memasukkan jumlah hari keterlambatan.
+8. Sistem memeriksa nilai keterlambatan yang dimasukkan.
+9. Sistem membuat object `Pengambilan`.
+10. Sistem menghitung denda berdasarkan jumlah hari keterlambatan.
+11. Sistem menghasilkan ID pengambilan secara otomatis.
+12. Data pengambilan disimpan ke dalam `ArrayList`.
+13. Status reservasi diubah menjadi **Selesai**.
+14. Status perangkat diubah menjadi **Disewa**.
+
+Perhitungan denda dilakukan menggunakan rumus:
+
+~~~text
+Denda = Hari Terlambat × Rp50.000
+~~~
+
+Dengan demikian, denda akan dihitung secara otomatis berdasarkan jumlah hari keterlambatan yang dimasukkan pengguna.
 
 <table border="1" bordercolor="black">
   <tr>
@@ -1683,7 +1718,7 @@ Menampilkan proses pencatatan pengambilan perangkat.
   </tr>
 </table>
 
-Menampilkan hasil pencatatan pengambilan perangkat yang mengalami keterlambatan beserta denda yang dikenakan.
+Screenshot tersebut menunjukkan hasil pencatatan pengambilan ketika terdapat keterlambatan. Sistem menampilkan jumlah hari keterlambatan dan denda yang dihasilkan dari perhitungan tersebut.
 
 ---
 
@@ -1697,7 +1732,9 @@ Menampilkan hasil pencatatan pengambilan perangkat yang mengalami keterlambatan 
   </tr>
 </table>
 
-Menampilkan seluruh data pengambilan yang telah tersimpan.
+Pada tahap ini, pengguna memilih menu untuk melihat seluruh data pengambilan yang telah tersimpan.
+
+Sistem membaca data `Pengambilan` dari `ArrayList`, kemudian menampilkannya menggunakan perulangan. Informasi yang ditampilkan meliputi ID pengambilan, ID reservasi, nama penyewa, perangkat, tanggal dan jam pengambilan, status pengambilan, jumlah hari keterlambatan, serta denda.
 
 ---
 
@@ -1711,7 +1748,11 @@ Menampilkan seluruh data pengambilan yang telah tersimpan.
   </tr>
 </table>
 
-Menampilkan hasil overriding method `tampilkanInfo()` pada `Kamera` dan `Drone`.
+Pada tahap ini, program menjalankan method `tampilkanInfo()` pada object `Kamera` dan `Drone`.
+
+Kedua class tersebut memiliki method `tampilkanInfo()` yang merupakan hasil overriding dari method pada superclass `Perangkat`. Ketika method dipanggil, masing-masing object menampilkan informasi sesuai dengan karakteristik class-nya.
+
+Hal ini menunjukkan penerapan **polymorphism melalui method overriding** dalam program.
 
 ---
 
@@ -1725,13 +1766,11 @@ Menampilkan hasil overriding method `tampilkanInfo()` pada `Kamera` dan `Drone`.
   </tr>
 </table>
 
-Menampilkan output ketika pengguna memilih menu keluar.
-
----
+Pada tahap terakhir, pengguna memilih menu **Keluar**. Sistem menjalankan kondisi keluar pada `switch-case`, menghentikan perulangan utama, dan menampilkan pesan bahwa program telah selesai digunakan.
 
 #### Insight
 
-Dokumentasi output menunjukkan hasil eksekusi dari setiap fitur utama yang terdapat dalam program, termasuk proses pengambilan perangkat dan perhitungan denda keterlambatan.
+Dokumentasi output menunjukkan tahapan penggunaan fitur utama Sistem Penyewaan Perangkat, mulai dari pengelolaan perangkat, pembuatan reservasi, hingga pencatatan pengambilan. Dokumentasi juga menunjukkan bahwa sistem tidak hanya menyimpan data, tetapi menjalankan proses seperti generate ID otomatis, perhitungan total harga, perubahan status perangkat, penerapan polymorphism, serta perhitungan denda berdasarkan jumlah hari keterlambatan.
 
 ---
 
